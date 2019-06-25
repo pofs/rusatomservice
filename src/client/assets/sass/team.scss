@@ -1,0 +1,226 @@
+.team-list{
+	.item{
+		margin-bottom: 30px;
+		height: auto;
+
+		@include breakpoint(large up) {
+			height: rem-calc(450);
+		}
+
+		@include breakpoint(x-large up) {
+			height: rem-calc(550);
+		}
+
+		.bg-wrap{
+			height: 100%;
+			position: relative;
+			background: #fff;
+			display: flex;
+			justify-content: flex-end;
+			overflow: hidden;
+
+			&:after{
+				content: '';
+				z-index: 1;
+				transition: all 0.45s cubic-bezier(0.7, 0.01, 0.45, 1);
+				width: 100%;
+				pointer-events: none;
+				height: 100%;
+				background: rgba(76, 76, 76, 0);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76, 76, 76, 0)), color-stop(36%, rgba(60, 60, 60, 0)), color-stop(100%, rgba(32, 32, 32, 0.8)));
+				background: linear-gradient(to bottom, rgba(76, 76, 76, 0) 0%, rgba(60, 60, 60, 0) 36%, rgba(32, 32, 32, 0.8) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#202020', GradientType=0 );
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		.picture {
+			width: 100%;
+			position: relative;
+			height: rem-calc(250);
+
+			@include breakpoint(average up) {
+				height: rem-calc(300);
+			}
+
+			@include breakpoint(medium up) {
+				height: rem-calc(350);
+			}
+
+
+			@include breakpoint(large up) {
+				height: 100%;
+			}
+
+			z-index: 1;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		.persone-info{
+			z-index: 2;
+			position: absolute;
+			left:0;
+			width:100%;
+			font-size: 14px;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			height: auto;
+			top:0;
+			padding:em(30px);
+
+			@include breakpoint(large up) {
+				height:100%;
+			}
+
+			.name{
+				font-size: 22px;
+				display: block;
+				margin-bottom: 12px;
+			}
+			.status{
+				display: block;
+				min-height: 65px;
+			}
+		}
+		&.big-item{
+			.picture {
+				background-size: cover;
+				background-position: right center;
+				background-repeat: no-repeat;
+
+				@include breakpoint(large up) {
+					background-size: contain;
+				}
+			}
+			.bg-wrap{
+				display: flex;
+				background: #bcd1c8;
+				justify-content: flex-end;
+				&:after{
+					display: none;
+				}
+			}
+			.persone-info{
+				max-width: 50%;
+				color: #202020;
+				.status{
+					color: #5a5a5a;
+				}
+			}
+		}
+	}
+	&.team-other_list{
+		.item{
+			.bg-wrap{
+				background: #e1e1e1;
+			}
+		}
+	}
+}
+
+@media(max-width: 1690px){
+	.team-list{
+		.item{
+			flex: 0 0 33.33333%;
+    		max-width: 33.33333%;
+    		.bg-wrap{
+    			justify-content: center;
+    		}
+    		&.big-item{
+    			.bg-wrap{
+    				display: flex;
+					justify-content: center;
+    				&:after{
+    					display: block;
+    				}
+    			}
+    			.persone-info{
+    				color: #fff;
+    				max-width: 100%;
+    				.status{
+    					color: #fff;
+    				}
+    			}
+    		}
+		}
+	}
+}
+
+@media(max-width: 1279px){
+	.team-list{
+		&.team-other_list .item .bg-wrap{
+			background: none;
+		}
+		.item{
+			.bg-wrap{
+				background: none;
+				flex-direction: column;
+			    justify-content: flex-start;
+			    align-items: center;
+				&:after{
+					display: none;
+				}
+			}
+			&.big-item{
+				.bg-wrap{
+					flex-direction: column;
+				    justify-content: flex-start;
+				    align-items: center;
+				    background: none;
+					&:after{
+						display: none;
+					}
+				}
+				.persone-info{
+					color: #202020;
+					.status{
+						color: #5a5a5a;
+					}
+				}
+			}
+			.persone-info{
+				padding: 25px 30px 10px;
+				color: #202020;
+				position: relative;
+				.status{
+					color: #5a5a5a;
+				}
+				.name{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 991px){
+	.team-list{
+		.item{
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+}
+
+@media(max-width: 767px){
+	.team-list{
+		margin: 0 -5px;
+		.item{
+			padding: 0 5px;
+			img{
+				width: 100%;
+			}
+			.persone-info{
+				font-size: 13px;
+				padding: 15px 5px 10px 10px;
+				.name{
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}

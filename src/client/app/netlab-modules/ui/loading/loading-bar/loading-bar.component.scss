@@ -1,0 +1,101 @@
+@import '../../../../../assets/sass/variables';
+@import '../../../../../assets/sass/mixins';
+
+:host {
+  .loading-bar-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: rgba($green, 0.25);
+    overflow: hidden;
+    opacity: 0;
+
+    &.simple {
+      top: 0;
+      height: rem-calc(4);
+      transform: translate3d(0, rem-calc(-4), 0);
+      transition: transform 0.35s ease, opacity 0.35s ease;
+
+      &.inactive {
+        opacity: 0;
+        transform: translate3d(0, rem-calc(-4), 0);
+      }
+    }
+
+    &.icon {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: $white;
+      z-index: 99;
+      transition: opacity 0.34s ease;
+      pointer-events: none;
+
+      &.inactive {
+        opacity: 0;
+      }
+
+      .loading-bar {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        width: rem-calc(58);
+        height: rem-calc(52);
+        margin-left: rem-calc(-29);
+        margin-top: rem-calc(-26);
+        background: url('/assets/img/loader3.gif');
+        background-size: 100%;
+      }
+
+      &.active {
+        opacity: 0.68;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    &.for-header {
+      bottom: 0;
+      height: rem-calc(3);
+      transform: translate3d(0, rem-calc(3), 0);
+      transition: transform 0.35s ease, opacity 0.35s ease;
+
+      &.inactive {
+        opacity: 0;
+        transform: translate3d(0, rem-calc(3), 0);
+      }
+    }
+
+    &.active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.simple,
+    &.for-header {
+      .loading-bar {
+        @keyframes bar-animation {
+          0% {
+            transform: translate3d(-100%, 0, 0);
+          }
+
+          100% {
+            transform: translate3d(100%, 0, 0);
+          }
+        }
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($green, 0.8);
+        animation-name: bar-animation;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

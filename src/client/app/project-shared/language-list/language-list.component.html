@@ -1,0 +1,4 @@
+<ul class="language-list">
+  <li class="active"><a class="active">{{ currentLanguage.label }}</a></li>
+  <li *ngFor="let language of availableLanguages | withoutSelectedLanguage:currentLanguage"><a [routerLink]="['/', language.code]">{{ language.label }}</a></li>
+</ul>

@@ -1,0 +1,371 @@
+@import '../../../../assets/sass/shared';
+
+header {
+  height: rem-calc(50);
+  background: white;
+  position: relative;
+  box-shadow: 0 3px 10px rgba($black, 0.25);
+  z-index: 11;
+
+  .back-to-home {
+    position: absolute;
+    width: rem-calc(50);
+    height: rem-calc(50);
+    line-height: rem-calc(50);
+    text-align: center;
+    background: $blue;
+    z-index: 20;
+    color: white;
+    cursor: pointer;
+    transition: color 0.35s ease, background-color 0.35s ease;
+
+    &:hover {
+      background: $light-blue;
+      color: $almost-black;
+    }
+
+    svg {
+      width: rem-calc(18);
+      height: rem-calc(18);
+      vertical-align: middle;
+    }
+
+    @include breakpoint(medium up) {
+      width: rem-calc(60);
+      height: rem-calc(60);
+      line-height: rem-calc(60);
+    }
+
+    @include breakpoint(large up) {
+      width: rem-calc(75);
+      height: rem-calc(75);
+      line-height: rem-calc(75);
+    }
+  }
+
+  @include breakpoint(medium up) {
+    height: rem-calc(60);
+  }
+
+  @include breakpoint(large up) {
+    height: rem-calc(75);
+  }
+
+  .logo {
+    position: absolute;
+    width: rem-calc(170);
+    left: rem-calc(30);
+    top: rem-calc(12);
+    transform: translate3d(30px, 0, 0);
+
+    @include breakpoint(medium up) {
+      width: rem-calc(170);
+      top: rem-calc(15);
+      left: rem-calc(40);
+    }
+
+    @include breakpoint(large up) {
+      width: rem-calc(220);
+      top: rem-calc(20);
+      left: rem-calc(55);
+    }
+  }
+
+  .menu-toggle {
+    @include breakpoint(average down) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: rem-calc(60);
+      height: rem-calc(60);
+      z-index: 999;
+      cursor: pointer;
+
+      .line-1,
+      .line-2,
+      .line-3 {
+        position: absolute;
+        display: block;
+        width: rem-calc(30);
+        height: rem-calc(3);
+        left: rem-calc(15);
+        background: $almost-black;
+      }
+
+      .line-1 {
+        top: rem-calc(16);
+      }
+
+      .line-2 {
+        top: rem-calc(24);
+      }
+
+      .line-3 {
+        top: rem-calc(32);
+      }
+    }
+    @include breakpoint(medium up) {
+      display: none;
+    }
+  }
+
+  .menu {
+    @include breakpoint(average down) {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 99999;
+
+      &.opened {
+        display: initial;
+      }
+
+      nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: rem-calc(360);
+        height: 100%;
+        padding-top: rem-calc(80);
+        padding-left: rem-calc(40);
+        z-index: 20;
+
+        @include breakpoint(average) {
+          width: rem-calc(480);
+          padding-top: rem-calc(180);
+        }
+      }
+
+      .bg {
+        position: absolute;
+        width: rem-calc(360);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 10;
+
+        @include breakpoint(average) {
+          width: rem-calc(480);
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba($black, 0.85);
+        z-index: 5;
+      }
+
+      .close {
+        position: absolute;
+        top: rem-calc(20);
+        left: rem-calc(320);
+        width: rem-calc(14);
+        height: rem-calc(14);
+        z-index: 50;
+        cursor: pointer;
+
+        @include breakpoint(average) {
+          left: rem-calc(440);
+        }
+      }
+
+      .menu-list {
+        .home {
+          display: none;
+        }
+
+        li {
+          font-size: rem-calc(16);
+          margin-bottom: rem-calc(20);
+          text-transform: uppercase;
+
+          @include breakpoint(average) {
+            font-size: rem-calc(20);
+            margin-bottom: rem-calc(40);
+          }
+
+          a {
+            color: $black;
+            transition: color 0.35s ease;
+
+            &.active {
+              color: $blue;
+            }
+
+            &:hover {
+              color: $blue;
+
+              .icon-home {
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+
+      .language-list {
+        padding-top: 20px;
+
+        li {
+          display: inline-block;
+          margin-right: rem-calc(20);
+
+          a {
+            font-size: rem-calc(18);
+            text-transform: uppercase;
+            color: $dark-gray;
+
+            &:hover {
+              color: $black;
+            }
+
+            @include breakpoint(average) {
+              font-size: rem-calc(20);
+            }
+          }
+
+          &.active {
+            a {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+
+    @include breakpoint(medium up) {
+      .close {
+        display: none;
+      }
+
+      .menu-list {
+        position: absolute;
+        right: rem-calc(70);
+        top: rem-calc(10);
+
+        @include breakpoint(large up) {
+          top: rem-calc(17);
+          right: rem-calc(85);
+        }
+
+        li {
+          display: inline-block;
+          vertical-align: middle;
+          text-transform: uppercase;
+          font-size: rem-calc(12);
+          letter-spacing: rem-calc(0.4);
+          font-weight: 600;
+          line-height: rem-calc(40);
+
+          @include breakpoint(large up) {
+            font-size: rem-calc(12);
+            letter-spacing: rem-calc(0.8);
+          }
+
+          @include breakpoint(x-large up) {
+            font-size: rem-calc(14);
+            letter-spacing: rem-calc(0.8);
+          }
+
+          a {
+            color: $black;
+            padding: rem-calc(0 5);
+            transition: color 0.35s ease;
+
+            &.active {
+              color: $blue;
+            }
+
+            @include breakpoint(large up) {
+              padding: rem-calc(0 15);
+            }
+
+            .icon-home {
+              color: $dark-gray;
+
+              svg {
+                position: relative;
+                top: 1px;
+              }
+            }
+
+            &:hover {
+              color: $blue;
+
+              .icon-home {
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+
+      .language-list {
+        display: initial;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: rem-calc(60);
+        overflow: hidden;
+        transition: height 0.3s ease;
+
+        &:hover {
+          height: rem-calc(120);
+        }
+
+        li {
+          width: rem-calc(60);
+          height: rem-calc(60);
+          text-align: center;
+          background: $light-blue;
+          line-height: rem-calc(60);
+
+          a {
+            display: block;
+            color: $dark-gray;
+            transition: color 0.35s ease, background 0.35s ease;
+            text-transform: uppercase;
+
+            &:hover {
+              background: $blue;
+              color: white;
+            }
+          }
+        }
+
+        @include breakpoint(large up) {
+          height: rem-calc(75);
+
+          &:hover {
+            height: rem-calc(150);
+          }
+
+          li {
+            width: rem-calc(75);
+            height: rem-calc(75);
+            line-height: rem-calc(75);
+          }
+        }
+
+        .active {
+        }
+      }
+    }
+  }
+}
+
+.home {
+  header {
+    .logo {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

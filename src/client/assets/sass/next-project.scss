@@ -1,0 +1,64 @@
+.next-project{
+	margin-top: em(150px);
+	background: #0781cf;
+	transition:all 0.45s cubic-bezier(.7,.01,.45,1);
+	height:430px;
+	position: relative;
+	&:hover{
+		background: #cacaca;
+	}
+	a{
+		height: 100%;
+		padding: 0 em(70px);
+		color:#fff;
+		display:flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.h1{
+		flex: 0;
+		max-width: 70%;
+	}
+	&:after{
+		content: "";
+		width: 65px;
+		height: 38px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 70px;
+		margin: auto;
+		background: url('/assets/img/svg/link-back_arrow.svg') no-repeat;
+	}
+}
+
+@media(max-width: 1279px){
+	.next-project{
+		margin-top: em(100px);
+		height:360px;
+		.h1{
+			max-width: 90%;
+		}
+	}
+	.next-project:after{
+		right: 25px;
+		width: 40px;
+	}
+}
+@media(max-width:767px){
+	.next-project{
+		height:300px;
+		.h1{
+			font-size: 1.8em;
+		}
+	}
+}
+
+@media(max-width: 639px){
+	.next-project a{
+		padding: 0 15px;
+	}
+	.next-project:after{
+		display: none;
+	}
+}

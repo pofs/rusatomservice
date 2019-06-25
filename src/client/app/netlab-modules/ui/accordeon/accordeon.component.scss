@@ -1,0 +1,27 @@
+@import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/mixins';
+
+:host {
+  display: block;
+  margin-top: rem-calc(10);
+
+  &:first-child {
+    margin-top: rem-calc(0);
+  }
+
+  .accordeon-wrapper {
+    border: 1px solid #e8e8e8;
+    border-radius: rem-calc(4);
+  }
+}
+
+.accordeon-element-body {
+  :host {
+    margin: rem-calc(-9);
+
+    .accordeon-wrapper {
+      border: none;
+      border-radius: 0;
+    }
+  }
+}

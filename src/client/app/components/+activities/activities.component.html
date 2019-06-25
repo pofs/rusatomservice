@@ -1,0 +1,16 @@
+<div class="main inner-page">
+  <div class="no-gutters row">
+    <aside class="sidebar-nav main-sidebar" [perfectScrollbar]>
+      <nav>
+        <ul>
+          <li *ngFor="let wd of workDirections$ | async" routerLinkActive="active">
+            <a routerLink="{{ 'URIPREFIX' | translate }}/activities/{{wd.id}}">{{ wd.name }}</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="content-right" [perfectScrollbar] #scrollContainer>
+      <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
+    </section>
+  </div>
+</div>

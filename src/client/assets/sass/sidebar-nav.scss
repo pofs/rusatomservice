@@ -1,0 +1,122 @@
+$transtion: all 0.25s ease;
+
+.sidebar-nav {
+	//flex: 0 0 325px;
+	padding:40px 10px 40px 30px;
+	border-right:1px solid #ebebeb;
+
+	nav{
+		margin-bottom: 50px;
+	}
+
+	li {
+		position: relative;
+		font-size: 12px;
+		margin: 0 0 18px;
+
+		@include breakpoint(medium up) {
+			font-size: 15px;
+			margin: 0 0 28px;
+		}
+
+		ul{
+			padding-top:15px;
+			margin-left: rem-calc(20);
+
+			li{
+				margin-bottom:15px;
+				font-weight: 400;
+				a{
+					color:#8c8c8c
+				}
+				&.active{
+					&:after{
+						display:none;
+					}
+					a{
+						color:#202020;
+					}
+				}
+			}
+		}
+	}
+
+	li.active{
+		font-size: 15px;
+		font-weight: 600;
+
+		@include breakpoint(medium up) {
+			font-size: 17px;
+		}
+
+		&:after{
+			content:'';
+			position: absolute;
+			left:-30px;
+			top:10px;
+			background: #d32118;
+			width:20px;
+			height:3px;
+		}
+		a{
+			color:#202020;
+		}
+	}
+	a{
+		color:#8c8c8c;
+		transition:$transtion;
+		&:hover{
+			color:#202020;
+		}
+	}
+}
+
+.contacts-media{
+	font-size: 12px;
+
+	@include breakpoint(medium up) {
+		font-size: 13px;
+	}
+
+	.title{
+		font-size: 15px;
+		text-transform: uppercase;
+		margin: 0 0 10px;
+		display: block;
+
+		@include breakpoint(medium up) {
+			font-size: 17px;
+		}
+	}
+
+	.img-box{
+		margin: 0 0 15px;
+		width:80px;
+		height:80px;
+		border-radius: 50%;
+		overflow: hidden;
+		img{
+			width: 110%;
+		}
+	}
+	a{
+		transition:$transtion;
+		display: table;
+		margin: 5px 0;
+		color: #202020;
+	}
+	.name{
+		display: block;
+		margin-bottom: 5px;
+	}
+	.tel:hover{
+		color: #0781cf;
+	}
+	.mail{
+		text-decoration: underline;
+		color: #0781cf;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}

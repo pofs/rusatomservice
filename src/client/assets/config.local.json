@@ -1,0 +1,41 @@
+{
+  "system": {
+    "applicationName": "APP_NAME",
+    "applicationUrl": "http://localhost",
+    "backendHost": "http://new.rusatomservice.ru"
+  },
+  "seo": {
+    "defaultPageTitle": "DEFAULT_TITLE",
+    "pageTitlePositioning": 10,
+    "pageTitleSeparator": " | ",
+    "defaultMetaDescription": "DEFAULT_META_DESCRIPTION"
+  },
+  "i18n": {
+    "defaultLanguage": {
+      "code": "ru",
+      "name": "Русский",
+      "culture": "ru-RU"
+    },
+    "availableLanguages": [
+      {
+        "code": "ru",
+        "name": "Русский",
+        "label": "Ru",
+        "culture": "ru-RU"
+      },
+      {
+        "code": "en",
+        "label": "En",
+        "name": "English",
+        "culture": "en-US"
+      }
+    ],
+    "useLocalizedRoutes": true
+  },
+  "routes": {
+    "en": {
+    },
+    "ru": {
+    }
+  }
+}

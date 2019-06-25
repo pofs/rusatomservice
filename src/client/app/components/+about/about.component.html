@@ -1,0 +1,36 @@
+<div class="main inner-page">
+  <div class="no-gutters row">
+    <aside class="sidebar-nav main-sidebar" [perfectScrollbar]>
+      <nav>
+        <ul>
+          <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/rusatom-service">{{ 'PUBLIC.MENU.ABOUT.ABOUT' | translate }}</a>
+            <ul>
+              <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/team">{{ 'PUBLIC.MENU.ABOUT.TEAM' | translate }}</a></li>
+            </ul>
+          </li>
+          <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/atomtehexport">{{ 'PUBLIC.MENU.ABOUT.ATOMTEHEXPORT' | translate }}</a>
+            <ul>
+              <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/atex-team">{{ 'PUBLIC.MENU.ABOUT.ATEX_TEAM' | translate }}</a></li>
+            </ul>
+          </li>
+          <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/advantages">{{ 'PUBLIC.MENU.ABOUT.ADVANTAGES' | translate }}</a></li>
+          <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/partners">{{ 'PUBLIC.MENU.ABOUT.PARTNERS' | translate }}</a></li>
+          <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/certificates">{{ 'PUBLIC.MENU.ABOUT.CERTIFICATES' | translate }}</a></li>
+          <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/reviews">{{ 'PUBLIC.MENU.ABOUT.REVIEWS' | translate }}</a></li>
+          <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/suppliers">{{ 'PUBLIC.MENU.ABOUT.SUPPLIERS' | translate }}</a></li>
+          <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/anti-corruption">{{ 'PUBLIC.MENU.ABOUT.ANTICORRUPTION' | translate }}</a></li>
+          <li routerLinkActive="active" *appIfLocale="'ru'">
+            <a routerLink="{{ 'URIPREFIX' | translate }}/about/vacancies">{{ 'PUBLIC.MENU.ABOUT.VACANCIES' | translate }}</a>
+            <ul>
+              <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/vacancies/all">{{ 'PUBLIC.MENU.ABOUT.VACANCIESALL' | translate }}</a></li>
+              <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/about/vacancies/candidates-pool">{{ 'PUBLIC.MENU.ABOUT.CANDIDATES' | translate }}</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="content-right" [perfectScrollbar] #scrollContainer>
+      <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
+    </section>
+  </div>
+</div>

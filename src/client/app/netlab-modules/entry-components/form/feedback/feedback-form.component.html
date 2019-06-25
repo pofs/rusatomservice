@@ -1,0 +1,46 @@
+<form novalidate
+      [formGroup]="form"
+      [class.submitted]="submitted"
+      (ngSubmit)="submit($event)">
+  <div class="grid-x" *ngIf="success">
+    <div class="cell small-12">
+      <p>{{ 'PUBLIC.CONTACTS.FEEDBACK_SUCCESS_TEXT' | translate }}.</p>
+    </div>
+  </div>
+
+  <div class="grid-x grid-margin-x" *ngIf="!success">
+    <div class="cell small-12">
+      <div class="input-row">
+        <label for="name">{{ 'PUBLIC.CONTACTS.FEEDBACK_TITLE' | translate }}:</label>
+        <input id="name" type="text" class="form-control" formControlName="name">
+      </div>
+      <div class="input-row">
+        <label for="phone">{{ 'PUBLIC.CONTACTS.FEEDBACK_PHONE' | translate }}:</label>
+        <input id="phone" type="text" class="form-control" formControlName="phone">
+      </div>
+      <div class="input-row">
+        <label for="text">{{ 'PUBLIC.CONTACTS.FEEDBACK_MESSAGE' | translate }}:</label>
+        <textarea id="text" rows="4" class="form-control" formControlName="text"></textarea>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="submit-row actions" *ngIf="!success">
+    <div class="grid-x">
+      <div class="cell small-12">
+        <button
+            type="submit"
+            class="button">
+          {{ dialogComponent.dialog.options.acceptButtonText }}
+        </button>
+      </div>
+    </div>
+    <div class="grid-x terms-rights">
+      <div class="cell small-12">
+        <app-checkbox-ui [form]="form"
+                         controlName="acceptTerms">{{ 'PUBLIC.CONTACTS.FEEDBACK_ACCEPT_TERMS' | translate }}</app-checkbox-ui>
+      </div>
+    </div>
+  </div>
+</form>

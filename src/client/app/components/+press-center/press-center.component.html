@@ -1,0 +1,39 @@
+<div class="main inner-page">
+  <div class="no-gutters row">
+    <aside class="sidebar-nav main-sidebar" [perfectScrollbar]>
+      <nav>
+      <ul>
+        <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/press-center/news">{{ 'PUBLIC.MENU.PRESSCENTER.PRESSCENTER' | translate }}</a></li>
+        <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/press-center/company-news">{{ 'PUBLIC.MENU.PRESSCENTER.COMP_NEWS' | translate }}</a></li>
+        <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/press-center/industry-news">{{ 'PUBLIC.MENU.PRESSCENTER.OTR_NEWS' | translate }}</a></li>
+        <li routerLinkActive="active" *appIfLocale="'ru'"><a routerLink="{{ 'URIPREFIX' | translate }}/press-center/smi">{{ 'PUBLIC.MENU.PRESSCENTER.SMI' | translate }}</a></li>
+        <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/press-center/gallery">{{ 'PUBLIC.MENU.PRESSCENTER.GALLERY' | translate }}</a></li>
+        <li routerLinkActive="active"><a routerLink="{{ 'URIPREFIX' | translate }}/press-center/style-guide">{{ 'PUBLIC.MENU.PRESSCENTER.IDENTITY' | translate }}</a></li>
+      </ul>
+    </nav>
+      <div class="contacts-media" *appIfLocale="'ru'">
+        <strong class="title">Контакты для сми</strong>
+        <div class="img-box">
+          <img src="/assets/img/persone-callback.jpg" alt="persone-callback">
+        </div>
+        <strong class="name">Нино Барамия</strong>
+        <div class="status">Pr-manager</div>
+        <a class="tel" href="tel:+74959957680">+7 495 995 7680, доб. 113</a>
+        <a class="mail" href="mailto:PR@rusatomservice.ru">PR@rusatomservice.ru</a>
+      </div>
+      <div class="contacts-media" *appIfLocale="'en'">
+        <strong class="title">Contacts</strong>
+        <div class="img-box">
+          <img src="/assets/img/persone-callback.jpg" alt="persone-callback">
+        </div>
+        <strong class="name">Nino Baramiya</strong>
+        <div class="status">Pr-manager</div>
+        <a class="tel" href="tel:+74959957680">+7 495 995 7680</a>
+        <a class="mail" href="mailto:PR@rusatomservice.ru">PR@rusatomservice.ru</a>
+      </div>
+    </aside>
+    <section class="content-right" [perfectScrollbar]>
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</div>

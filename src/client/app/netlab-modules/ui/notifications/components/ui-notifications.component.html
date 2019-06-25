@@ -1,0 +1,12 @@
+<div class="body-overlay" *ngIf="overlayVisible" [@overlayAnimation] (click)="closeDialog()"></div>
+<ui-toast *ngFor="let toast of (toasts$ | async); let i = index"
+          [toast]="toast"
+          [index]="i"
+          [onTop]="isOnTop(toast)"></ui-toast>
+<ui-dialog *ngFor="let dialog of (dialogs$ | async); let i = index; let l = last"
+           [class]="'index-' + i"
+           [style.zIndex]="i + 990"
+           [@dialogEnterLeave]
+           [dialog]="dialog"
+           [onTop]="l"
+           [index]="i"></ui-dialog>

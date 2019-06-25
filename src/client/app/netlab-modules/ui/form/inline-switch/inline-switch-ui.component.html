@@ -1,0 +1,11 @@
+<div class="inline-switch-wrapper"
+     tabindex="0"
+     [class.disabled]="disabled">
+  <div class="inline-switch-options-wrapper">
+    <div class="option" *ngFor="let option of options" (click)="selectOption(option)" [ngClass]="optionClass(option)">
+      <div class="option-label">
+        <span class="label-text" [title]="option.label">{{ option.label }}</span>
+      </div>
+    </div>
+  </div>
+</div>

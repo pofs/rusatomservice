@@ -1,0 +1,154 @@
+  <div class="title-banner" style="background-image: url(/assets/img/header/atomtehexport.jpg);">
+    <h1 class="h1">{{ 'PUBLIC.ABOUT.ATEX.TITLE' | translate }}</h1>
+    <div class="text" *appIfLocale="'ru'">
+      <p>Это - Инжиниринговая компания, комплексно решающая вопросы эксплуатационного сопровождения предконтрактных работ,
+        сооружения, ввода в эксплуатацию и эксплуатации энергоблоков зарубежных АЭС.</p>
+    </div>
+    <div class="text" *appIfLocale="'en'">
+      <p>Is an engineering company dealing holistically with the matters of operational maintenance of precontractual works, construction, commissioning and operation of foreign NPP power units.</p>
+    </div>
+  </div>
+  <div class="global-page_content container">
+    <div class="history">
+      <h2>{{ 'PUBLIC.ABOUT.ATEX.HISTORY_TITLE' | translate }}</h2>
+      <div class="history-way">
+      <ng-container *ngIf="atekHistories$ | async as histories">
+        <ngu-carousel [inputs]="historyCarousel">
+          <div class="item" ngu-item NguCarouselItem *ngFor="let history of histories">
+            <div class="data">{{ history.props.year }}</div>
+            <span>{{ history.name }}</span>
+          </div>
+          <button NguCarouselPrev class="arrow-slider arrow-prev leftRs">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+									 viewBox="0 0 62.2 116" xml:space="preserve">
+					  <path class="st0" d="M55.2,114.8c0.8,0.8,1.8,1.2,2.9,1.2s2.1-0.4,2.9-1.2c1.6-1.6,1.6-4.2,0-5.8L10,58L61,7c1.6-1.6,1.6-4.2,0-5.8
+										s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2,0,5.8L55.2,114.8z"></path>
+          </svg>
+          </button>
+          <button NguCarouselNext class="arrow-slider arrow-next rightRs">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+									 viewBox="0 0 62.2 116" xml:space="preserve">
+            <path class="st0" d="M7,1.2C6.2,0.4,5.2,0,4.1,0S2,0.4,1.2,1.2c-1.6,1.6-1.6,4.2,0,5.8l51,51l-51,51c-1.6,1.6-1.6,4.2,0,5.8
+										c1.6,1.6,4.2,1.6,5.8,0l54-53.9c1.6-1.6,1.6-4.2,0-5.8L7,1.2z"></path>
+          </svg>
+          </button>
+        </ngu-carousel>
+      </ng-container>
+      </div>
+    </div>
+    <div class="text-wrap" *appIfLocale="'ru'">
+      <h3>КЛЮЧЕВЫЕ НАПРАВЛЕНИЯ ПО ОКАЗАНИЮ УСЛУГ ПРИ ВВОДЕ В ЭКСПЛУАТАЦИЮ СООРУЖАЕМЫХ АЭС: </h3>
+      <ol class="template__ol">
+        <li><p>Техподдержка при: вводе в эксплуатацию, эксплуатации, проведении ППР</p>
+          - Содействие в приемке оборудования из монтажа, ПНР<br>
+          - Техническая поддержка при испытаниях и вводе оборудования в эксплуатацию<br>
+          - Участие в Предварительной Приёмке и Сдаче энергоблока АЭС в эксплуатацию<br>
+          - Техническая поддержка оперативного персонала Заказчика при эксплуатации АЭС<br>
+          - Консультирование Заказчика по вопросам обеспечения проектных параметров эксплуатации энергоблоков АЭС<br>
+          - Участие в разработке, проверке и актуализации эксплуатационной документации<br>
+          - Организация и проведение регистрации и технического освидетельствования оборудования и трубопроводов<br>
+          - Организация планирования, подготовки и выполнения планово-предупредительных ремонтов (ППР)
+        </li>
+        <li>
+          <p>Выполнение работ по ТОиР ТМО, ЭТО и оборудования АСУ ТП, а также по эксплуатационному контролю металла</p>
+            - Обеспечение мобилизации и транспортирования персонала Подрядчика и субподрядных организаций <br>
+            - Управление ходом ремонта <br>
+            - Выполнение технического обслуживания и ремонта (ТОиР) оборудования и систем важных для безопасности <br>
+            - Контроль качества выполнения работ, приемка оборудования и систем после ТОиР <br>
+            - Содействие в подготовке и оформлении отчетной документации <br>
+            - Обеспечение шеф-поддержки в период подготовки и выполнения ремонтов
+        </li>
+        <li>
+          <p>
+            Подготовка персонала АЭС, поддержание и повышение квалификации персонала, психофизиологическое обследование персонала
+          </p>
+          - Разработка системы и программ подготовки персонала АЭС <br>
+          - Обучение эксплуатационного и ремонтного персонала АЭС<br>
+          - Создание полномасштабных тренажеров энергоблоков АЭС <br>
+          - Создание УТЦ на территории Заказчика<br>
+          - Организация стажировок персонала АЭС на действующих российских АЭС <br>
+          - Услуги по дополнительному профессиональному обучению (повышение квалификации, переподготовка кадров) </li>
+        <li>
+          <p>
+            Разработка эксплуатационной и ремонтной документации
+          </p>
+          - Организационные документы технического обслуживания и ремонта (ТОиР) <br>
+          - Регламенты и Программы ТОиР <br>
+          - Технические условия на ремонт оборудования <br>
+          - Комплекты технологической документации на ремонт оборудования и систем (КТД) <br>
+          - Технологические инструкции по сварке, термообработке, диагностике, контролю и т.д.<br>
+          - Проекты организации выполнения работ
+        </li>
+        <li>
+          <p>Поставка оборудования и запасных частей для периода коммерческой эксплуатации АЭС </p>
+            - Техническая поддержка Заказчика в формировании и сопровождении информационной системы управления материально-техническими ресурсами<br>
+            - Разработка спецификации запасных частей стратегического назначения (неснижаемого запаса) <br>
+            - Разработка спецификации на ежегодную поставку планового объема ЗИП и расходных материалов <br>
+            - Заключение контрактов с поставщиками (изготовителями) ЗИП <br>
+            - Обеспечение поставки ЗИП и материалов Заказчику
+        </li>
+      </ol>
+    </div>
+    <div class="text-wrap" *appIfLocale="'en'">
+      <h3>Competences:</h3>
+      <p>
+        <strong>JSC ATEX</strong>, as a JSC “Rusatom Service” general contractor, has experience and competences in the following aspects:
+      </p>
+      <ol class="template__ol">
+        <li>Technical support of NPP operation.</li>
+        <li>Elaboration of a complete package of Operating and Repair documentation.</li>
+        <li>Elaboration of SOEI complete package.</li>
+        <li>Performance of the Principal’s personnel PPE.</li>
+        <li>Arrangement and Performance of M&amp;R.</li>
+      </ol>
+    </div>
+    <section class="global-slider">
+      <h2 class="h2">{{ 'PUBLIC.ABOUT.ATEX.CERTIFICATES_TITLE' | translate }}</h2>
+      <div class="certificates-slider slider">
+        <div class="certificates-list">
+        <ng-container *ngIf="atekCerts$ | async as certificates">
+          <ngu-carousel [inputs]="historyCerts">
+            <div class="item" ngu-item
+                 NguCarouselItem
+                 *ngFor="let cert of certificates;">
+              <a (click)="open(cert)">
+                <img [src]="cert.previewPicture | addDefaultHost" [alt]="cert.name">
+                <div class="info">
+                  <p>{{ cert.name }}</p>
+                </div>
+              </a>
+            </div>
+            <button NguCarouselPrev class="arrow-slider arrow-prev leftRs">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+									 viewBox="0 0 62.2 116" xml:space="preserve">
+					  <path class="st0" d="M55.2,114.8c0.8,0.8,1.8,1.2,2.9,1.2s2.1-0.4,2.9-1.2c1.6-1.6,1.6-4.2,0-5.8L10,58L61,7c1.6-1.6,1.6-4.2,0-5.8
+										s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2,0,5.8L55.2,114.8z"></path>
+          </svg>
+            </button>
+            <button NguCarouselNext class="arrow-slider arrow-next rightRs">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+									 viewBox="0 0 62.2 116" xml:space="preserve">
+            <path class="st0" d="M7,1.2C6.2,0.4,5.2,0,4.1,0S2,0.4,1.2,1.2c-1.6,1.6-1.6,4.2,0,5.8l51,51l-51,51c-1.6,1.6-1.6,4.2,0,5.8
+										c1.6,1.6,4.2,1.6,5.8,0l54-53.9c1.6-1.6,1.6-4.2,0-5.8L7,1.2z"></path>
+          </svg>
+            </button>
+          </ngu-carousel>
+        </ng-container>
+        </div>
+      </div>
+    </section>
+    <div *appIfLocale="'ru'">
+      <h2 class="h2">{{ 'PUBLIC.ABOUT.ATEX.SUPPLIERS_TITLE' | translate }}</h2>
+      <ng-container *ngIf="atekDealerInfoes$ | async as dealerInfoes">
+      <ul class="files-download five-grid_list row">
+        <li class="col-3 col-md-3 item" *ngFor="let dealerInfo of dealerInfoes">
+          <a target="_blank" [href]="dealerInfo.props.file.src | addDefaultHost">
+            <img src="/assets/img/pdf.png" alt="pdf">
+            <span class="name-file">{{dealerInfo.name}}</span>
+            <span class="size-file">{{ +dealerInfo.props.file.fileSize | bytes }}</span>
+          </a>
+        </li>
+      </ul>
+      </ng-container>
+    </div>
+  </div>

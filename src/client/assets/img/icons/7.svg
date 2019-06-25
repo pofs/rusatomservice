@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="54px" viewBox="0 0 48 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7" transform="translate(2.000000, 4.000000)">
+            <circle id="Oval-3" fill="#FFFFFF" cx="22" cy="23" r="4"></circle>
+            <ellipse id="Oval-4" fill="#FFFFFF" cx="8" cy="11.5" rx="3" ry="1.5"></ellipse>
+            <ellipse id="Oval-5" stroke="#FFFFFF" stroke-width="2" transform="translate(22.610586, 23.165233) rotate(-328.000000) translate(-22.610586, -23.165233) " cx="22.6105863" cy="23.1652327" rx="8" ry="22.3169873"></ellipse>
+            <ellipse id="Oval-5-Copy" stroke="#FFFFFF" stroke-width="2" transform="translate(22.610586, 23.165233) scale(-1, 1) rotate(-328.000000) translate(-22.610586, -23.165233) " cx="22.6105863" cy="23.1652327" rx="8" ry="22.3169873"></ellipse>
+            <ellipse id="Oval-6" stroke="#FFFFFF" stroke-width="2" cx="22" cy="23.5" rx="22" ry="8.5"></ellipse>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,55 @@
+$transtion: all 0.45s cubic-bezier(0.1, 0.36, 0.54, 1.02); 
+
+.pagination {
+  margin: 0 auto;
+  display: table;
+  nav {
+    ul {
+      li {
+        display: inline-block;
+        margin: 0 3px;
+        vertical-align: middle;
+        a, span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #202020;
+          width: 44px;
+          height: 44px;
+          font-weight: 600;
+          font-size:20px;
+          border-radius: 50px;
+          transition:$transtion;
+          border: 2px solid transparent;
+        }
+        a {
+          &:hover {
+            border-color:#0781cf ;
+            background: none;
+          }
+        }
+
+        &.active {
+          a {
+            cursor: default;
+            border-color:#0781cf ;
+            background: #0781cf ;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:639px){
+  .pagination nav ul li{
+    margin:0;
+    a{
+      width:35px;
+      height:35px;
+      font-size: 14px;
+    }
+  }
+}

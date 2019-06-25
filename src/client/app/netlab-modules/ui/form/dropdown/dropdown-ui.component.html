@@ -1,0 +1,24 @@
+<div class="drop-down-wrapper"
+     tabindex="0"
+     [class.disabled]="isDisabled()"
+     [class.opened]="opened"
+     (focus)="openDropdown()"
+     (focusout)="closeDropdown()">
+  <div class="drop-down-label" (mousedown)="toggleDropdown()">
+    <span class="label-text" [innerHtml]="labelText"></span>
+    <div class="toggle">
+      <svg preserveAspectRatio="none" viewBox="0 0 10 5">
+        <path fill="currentColor" d="M0,0h10l-5,5L0,0z"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="drop-down-options-wrapper">
+    <div class="drop-down-options" [@openCloseOptions]="opened">
+      <div class="option" *ngFor="let option of options" (click)="selectOption(option)" [ngClass]="optionClass(option)">
+        <div class="option-label">
+          <span class="label-text" [title]="option.label">{{ option.label }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

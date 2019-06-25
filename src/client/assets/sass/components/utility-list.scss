@@ -1,0 +1,25 @@
+$transtion: all 0.45s cubic-bezier(0.1, 0.36, 0.54, 1.02); 
+
+.utility-list{
+	font-size: 18px;
+	ul{
+		li{
+			margin-bottom: 35px;
+		}
+		a{
+			transition:$transtion;
+			color: #202020;
+			border-bottom:2px solid #d32118;
+			display:table;
+			&:hover{
+				border-bottom:2px solid transparent;
+			}
+		}
+	}
+}
+
+@media(max-width:479px){
+	.utility-list{
+		font-size:16px;
+	}
+}

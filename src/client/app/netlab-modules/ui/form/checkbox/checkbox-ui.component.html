@@ -1,0 +1,33 @@
+<div tabindex="0"
+     [ngClass]="classList"
+     (click)="onClick($event)"
+     (focusin)="focusIn($event)"
+     (keypress)="keypress($event)">
+  <ng-container [ngSwitch]="template">
+    <ng-template ngSwitchCase="svg-icon">
+      <div class="icon">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+        <div [innerHtml]="iconTemplate"></div>
+      </div>
+    </ng-template>
+    <ng-template ngSwitchDefault>
+      <div class="checkbox-control">
+        <span class="checkbox-mark">
+          <svg viewBox="0 0 32 28">
+              <path fill="currentColor" d="M31.7,5.4L12.8,27.6c-0.4,0.5-1.1,0.6-1.5,0.2c-0.1-0.1-0.1-0.1-0.2-0.2l-0.4-0.4l0,0
+                l-0.4-0.5l-1.8-2.1c0,0,0,0,0,0l-8.2-9.6c-0.5-0.6-0.5-1.4,0-2l2.6-3C3.3,9.4,4,9.3,4.5,9.7c0.1,0.1,0.1,0.1,0.2,0.2l7.3,8.7
+                L27.4,0.4c0.4-0.5,1.1-0.6,1.5-0.2C29,0.3,29,0.3,29.1,0.4l2.6,3C32.1,4,32.1,4.9,31.7,5.4z"></path>
+            </svg>
+        </span>
+      </div>
+      <div class="input-content">
+        <img [src]="icon" *ngIf="icon" class="icon">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+      </div>
+    </ng-template>
+  </ng-container>
+</div>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

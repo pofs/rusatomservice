@@ -1,0 +1,11 @@
+<span class="loading-state">
+  <span class="loading-circle"></span>
+</span>
+<span class="label-state">
+  <ng-content></ng-content>
+</span>
+<div class="controls" [ngSwitch]="type">
+  <button type="submit" *ngSwitchCase="'submit'" #button></button>
+  <button *ngSwitchCase="'button'" #button></button>
+  <button *ngSwitchDefault #button></button>
+</div>

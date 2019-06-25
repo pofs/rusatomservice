@@ -1,0 +1,21 @@
+@import '../../../assets/sass/shared';
+
+.projects-content {
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(20);
+
+  @include breakpoint(medium up) {
+    padding-left: rem-calc(30);
+    padding-right: rem-calc(30);
+  }
+
+  @include breakpoint(large up) {
+    padding-left: rem-calc(40);
+    padding-right: rem-calc(40);
+  }
+
+  @include breakpoint(x-large up) {
+    padding-left: rem-calc(50);
+    padding-right: rem-calc(50);
+  }
+}

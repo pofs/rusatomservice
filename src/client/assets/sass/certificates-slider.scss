@@ -1,0 +1,27 @@
+.certificates-slider{
+	.arrow-slider{
+		background:none;
+		width: 20px;
+		margin: 0 7px;
+		height: 20px;
+		&:active{
+			box-shadow: none;
+		}
+		svg{
+			width: 14px;
+    		height: 20px;
+		}
+		.st0{
+			fill: #636363;
+		}
+		&:hover{
+			.st0{
+				fill: #0781cf;
+			}
+		}
+	}
+	.certificates-list .item img{
+		width:auto;
+		height:auto;
+	}
+}

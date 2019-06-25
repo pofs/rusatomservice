@@ -1,0 +1,119 @@
+@import '../../../../../assets/sass/shared';
+
+:host {
+  display: block;
+  background: #fff;
+
+  .submitted {
+    .form-control.ng-dirty {
+      &.ng-valid {
+        //color: $green;
+        //background: #EBFFEB;
+      }
+
+      &.ng-invalid {
+        color: $red;
+        background: #ffebeb;
+      }
+    }
+  }
+
+  .input-row {
+  }
+
+  .radio-buttons-row {
+    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+  }
+
+  .permission-subject {
+    min-height: rem-calc(40);
+  }
+
+  .chips {
+    font-size: rem-calc(10);
+    text-transform: uppercase;
+    letter-spacing: rem-calc(0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: rem-calc(18);
+
+    .chip-label {
+      display: inline-block;
+      padding: rem-calc(0 0 0 10);
+    }
+
+    .chips-item {
+      display: inline-block;
+      padding: rem-calc(0 8);
+      background: $light-gray;
+      border-radius: rem-calc(6);
+      margin-left: rem-calc(5);
+
+      &.first {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .choose-row {
+    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+    margin-bottom: rem-calc(20);
+    background-color: #f8f8f8;
+    margin-left: rem-calc(-30);
+    margin-right: rem-calc(-30);
+
+    .row-label {
+      text-align: center;
+      font-size: rem-calc(12);
+      text-transform: uppercase;
+      letter-spacing: rem-calc(0.8);
+      margin-bottom: rem-calc(20);
+    }
+  }
+
+  .scope-row {
+    margin-top: rem-calc(20);
+
+    .grid-x {
+      margin-left: rem-calc(20);
+      margin-right: rem-calc(20);
+    }
+  }
+
+  .actions {
+    text-align: center;
+    margin-top: rem-calc(20);
+    margin-bottom: rem-calc(20);
+
+    .terms-rights {
+      padding-top: rem-calc(30);
+      font-size: rem-calc(14);
+      line-height: rem-calc(24);
+    }
+
+    .button {
+      width: 100%;
+      margin-left: rem-calc(20);
+      display: inline-block;
+      padding: rem-calc(15 25);
+      margin-bottom: 0;
+      transition: all 0.35s ease;
+      transform: scaleX(1) scaleY(1);
+      background-color: $blue;
+      border-radius: 0;
+      font-size: rem-calc(16);
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:active {
+        transform: scaleX(0.98) scaleY(0.96);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

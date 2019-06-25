@@ -1,0 +1,28 @@
+<div class="accordeon-element" [class.opened]="opened">
+  <div class="accordeon-element-head" (click)="toggle()">
+    {{ title }}
+    <div class="control">
+      <svg version="1.1" class="up-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           viewBox="0 0 185.333 185.333" xml:space="preserve">
+        <path fill="currentColor" class="up" d="M174.612,144.368c-2.747,0-5.493-1.044-7.593-3.144L92.672,66.872l-74.347,74.352
+          c-4.194,4.194-10.987,4.194-15.18,0c-4.194-4.194-4.194-10.981,0-15.17l81.934-81.945c4.194-4.194,10.992-4.194,15.18,0
+          l81.929,81.945c4.194,4.194,4.194,10.976,0,15.17C180.105,143.318,177.364,144.368,174.612,144.368z"></path>
+        <path fill="currentColor" class="down" d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18
+          c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0
+          c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path>
+      </svg>
+      <svg version="1.1" class="switch" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+       viewBox="0 0 58 58" xml:space="preserve">
+       <path fill="currentColor" d="M17,12h24c9.35,0,17,7.65,17,17v0c0,9.35-7.65,17-17,17H17C7.65,46,0,38.35,0,29v0
+        C0,19.65,7.65,12,17,12z"></path>
+       <circle fill="white" cx="41" cy="29" r="12"></circle>
+     </svg>
+    </div>
+  </div>
+  <div class="accordeon-element-body" [@openClose]="opened">
+    <div class="padding-wrapper">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+

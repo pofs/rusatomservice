@@ -1,0 +1,177 @@
+@import '../../../../assets/sass/mixins';
+$transtion: all 0.35s cubic-bezier(0.7, 0.01, 0.45, 1);
+
+footer {
+  background: #1e1e1e;
+
+  .row {
+    padding: em(100px) em(70px) em(160px);
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .logo-box {
+    flex: 0 0 19.5%;
+
+    .logo {
+      display: table;
+      width: 240px;
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+        image-rendering: optimizeSpeed;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+        -ms-interpolation-mode: nearest-neighbor;
+        display: block;
+      }
+    }
+
+    .text-logo {
+      display: block;
+      margin-bottom: 35px;
+      color: #939393;
+      font-size: 17px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #343434;
+    }
+
+    .login-link {
+      display: table;
+      padding-left: 38px;
+      position: relative;
+      text-transform: uppercase;
+      transition: $transtion;
+      color: #939393;
+
+      .icon-key {
+        position: absolute;
+        width: 22px;
+        height: 10px;
+        left: 0;
+        top: 5px;
+
+        svg {
+          width: 100%;
+          display: block;
+        }
+
+        .st0 {
+          transition: $transtion;
+          fill: #939393;
+        }
+      }
+
+      &:hover {
+        color: #fff;
+
+        .icon-key .st0 {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .nav-footer {
+    flex: 0 0 65%;
+    display: flex;
+
+    .h3 {
+      text-transform: uppercase;
+      position: relative;
+      display: table;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: $transtion;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+
+    .box + .box {
+      margin-top: 40px;
+    }
+
+    .item {
+      padding: 0 20px;
+      flex: 0 0 33%;
+    }
+
+    li {
+      a {
+        font-size: 15px;
+        color: #858585;
+        transition: $transtion;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      & + li {
+        margin-top: 18px;
+      }
+    }
+
+    a {
+      color: #fff;
+      transition: $transtion;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  footer {
+    .row {
+      padding: 4em 3em 2.5em;
+    }
+
+    .logo-box {
+      flex: 0 0 100%;
+
+      .login-link {
+        padding-left: 0;
+        margin: 0 auto;
+        padding-top: 25px;
+
+        .icon-key {
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 2px;
+        }
+      }
+
+      .logo {
+        width: 150px;
+        margin: 0 auto 35px;
+      }
+    }
+
+    .nav-footer {
+      display: none;
+    }
+
+    .logo-box {
+      .text-logo {
+        padding-bottom: 35px;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+}

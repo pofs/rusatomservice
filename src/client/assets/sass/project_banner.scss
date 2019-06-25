@@ -1,0 +1,67 @@
+.project_banner{
+	height: 800px;
+	padding: 0 em(70px) em(100px);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	.geography{
+		display: inline-block;
+		opacity: 1;
+		color: #fff;
+	}
+	.data{
+		margin-left: 35px;
+		color:#fff;
+		.icon-data{
+			display: inline-block;
+			vertical-align: middle;
+			width:20px;
+			height:17px;
+			margin-top: -2px;
+			margin-right: 10px;
+			svg{
+				width:100%;
+				height:100%;
+			}
+		}
+	}
+	.h1{
+		flex: 0;
+		margin-bottom: 0;
+		max-width: 70%;
+		color: #fff;
+	}
+}
+
+@media (max-width: 1428px){
+	.project_banner{
+		padding: 0 3em 80px;
+		height: 500px;
+	}
+}
+
+@media(max-width: 1279px){
+	.project_banner .h1{
+		max-width: 90%;
+		font-size: 2em;
+	}
+}
+@media(max-width: 767px){
+	.project_banner{
+		padding: 0 20px 40px;
+	}
+	.project_banner .geography{
+		display: block;
+	}
+	.project_banner .data{
+		margin: 0 0 15px;
+		display: block;
+	}
+}
+@media(max-width: 479px){
+	.project_banner .h1{
+		font-size: 1.8em;
+	}
+}

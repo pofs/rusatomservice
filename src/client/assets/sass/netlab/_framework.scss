@@ -1,0 +1,15 @@
+@import 'settings';
+@import '~foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-xy-grid-classes;
+@include foundation-flex-classes;
+@include foundation-forms;
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-responsive-embed;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-table;
+@include foundation-visibility-classes;
+@include foundation-float-classes;

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="26px" viewBox="0 0 35 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>22</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-7.000000, -14.000000)">
+            <g id="22" transform="translate(7.000000, 14.000000)">
+                <rect id="Rectangle-10" fill="#FFFFFF" x="0" y="10" width="10" height="2" rx="1"></rect>
+                <rect id="Rectangle-10-Copy" fill="#FFFFFF" x="2" y="14" width="8" height="2" rx="1"></rect>
+                <rect id="Rectangle-10-Copy-2" fill="#FFFFFF" x="4" y="18" width="6" height="2" rx="1"></rect>
+                <rect id="Rectangle-11" fill="#FFFFFF" x="19" y="0" width="8" height="3" rx="1.5"></rect>
+                <rect id="Rectangle-12" fill="#FFFFFF" x="21" y="2" width="4" height="3"></rect>
+                <rect id="Rectangle-11-Copy" fill="#FFFFFF" transform="translate(14.442253, 6.590079) rotate(51.000000) translate(-14.442253, -6.590079) " x="11.4422531" y="4.59007867" width="6" height="4" rx="2"></rect>
+                <rect id="Rectangle-11-Copy-2" fill="#FFFFFF" transform="translate(31.442253, 6.590079) scale(-1, 1) rotate(51.000000) translate(-31.442253, -6.590079) " x="28.4422531" y="4.59007867" width="6" height="4" rx="2"></rect>
+                <circle id="Oval-14" fill="#FFFFFF" cx="23" cy="15" r="2"></circle>
+                <circle id="Oval-13" stroke="#FFFFFF" stroke-width="3" cx="23" cy="15" r="9.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

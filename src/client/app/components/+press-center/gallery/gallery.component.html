@@ -1,0 +1,21 @@
+<div class="title-banner" style="background-image: url(/assets/img/header/galereya.jpg);">
+  <h1 class="h1">{{ 'PUBLIC.GALLERY.TITLE' | translate }}</h1>
+</div>
+<div class="global-page_content container">
+  <div class="news-list row">
+    <ng-container *ngIf="news$ | async as news">
+      <div *ngFor="let n of news"
+           class="col-12 col-sm-6 col-md-4 col-xl-3 item">
+        <a routerLink="{{ 'URIPREFIX' | translate }}/press-center/gallery/{{ n.id }}">
+          <img [src]="n.previewPicture | addDefaultHost" [alt]="n.name">
+          <div class="text-info">
+            <time class="time">{{ n.createdDate }}</time>
+            <strong class="title">{{ n.name }}</strong>
+          </div>
+        </a>
+      </div>
+      <app-pagination-ui *ngIf="news.pageCount > 1" [total]="news.pageCount"
+                         [current]="news.currentPage" (paginate)="paginate($event)"></app-pagination-ui>
+    </ng-container>
+  </div>
+</div>

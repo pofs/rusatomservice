@@ -1,0 +1,48 @@
+<form novalidate
+      [formGroup]="form"
+      [class.submitted]="submitted"
+      (ngSubmit)="submit($event)">
+  <div class="grid-x" *ngIf="success">
+    <div class="cell small-12">
+      <p>Ваша заявка отправлена, специалист свяжется с Вами в ближайшее время.</p>
+    </div>
+  </div>
+
+  <div class="grid-x grid-margin-x" *ngIf="!success">
+    <div class="cell small-12">
+      <div class="input-row">
+        <label for="name">Имя:</label>
+        <input id="name" type="text" class="form-control" formControlName="name">
+      </div>
+      <div class="input-row">
+        <label for="age">Ваш возраст:</label>
+        <input id="age" type="text" class="form-control" formControlName="age">
+      </div>
+      <div class="input-row">
+        <label for="job">Текущее место работы:</label>
+        <input id="job" type="text" class="form-control" formControlName="job">
+      </div>
+      <div class="input-row">
+        <label for="phone">Телефон:</label>
+        <input id="phone" type="text" class="form-control" formControlName="phone">
+      </div>
+    </div>
+  </div>
+
+  <div class="submit-row actions" *ngIf="!success">
+    <div class="grid-x">
+      <div class="cell small-12">
+        <button
+            type="submit"
+            class="button">
+          {{ dialogComponent.dialog.options.acceptButtonText }}
+        </button>
+      </div>
+    </div>
+    <div class="grid-x terms-rights">
+      <div class="cell small-12">
+        <app-checkbox-ui [form]="form" controlName="acceptTerms">Согласен с политикой конфиденциальности</app-checkbox-ui>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,137 @@
+@import '../../../../../assets/sass/variables';
+@import '../../../../../assets/sass/mixins';
+
+:host {
+  display: block;
+
+  .drop-down-wrapper {
+    position: relative;
+    user-select: none;
+    z-index: 10;
+    transition: z-index 0.4s ease 0.4s, opacity 0.4s ease 0s;
+
+    &.disabled {
+      opacity: 0.4;
+    }
+
+    &:focus {
+      outline: none !important;
+    }
+
+    .drop-down-label {
+      position: relative;
+      z-index: 10;
+      padding: rem-calc(0 11);
+      height: rem-calc(34);
+
+      .label-text {
+        display: block;
+        color: #202020;
+        font-size: rem-calc(14);
+        line-height: rem-calc(34);
+        white-space: nowrap;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .toggle {
+        position: absolute;
+        top: rem-calc(15);
+        right: rem-calc(12);
+        width: rem-calc(10);
+        height: rem-calc(5);
+        color: #5b5b5b;
+
+        svg {
+          display: block;
+        }
+      }
+    }
+
+    .drop-down-options-wrapper {
+      overflow: hidden;
+      position: absolute;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border: 1px solid #d6d6d6;
+      border-radius: 4px;
+      transition: border 0.35s ease, box-shadow 0.35s ease;
+      padding-top: rem-calc(32);
+      background: white;
+      box-shadow: 0 rem-calc(3) rem-calc(6) 0 rgba(0, 0, 0, 0);
+
+      .option {
+        border-top: 1px solid #eee;
+        min-height: rem-calc(32);
+        width: 100%;
+        color: #737373;
+        font-size: rem-calc(14);
+        line-height: rem-calc(18);
+        background-color: #fff;
+        transition: all 0.35s ease;
+
+        .option-label {
+          width: 100%;
+          padding: rem-calc(7 11);
+          white-space: nowrap;
+          -ms-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        &:hover {
+          color: $black;
+          background-color: #f2f2f2;
+        }
+
+        &:active {
+          background-color: #eee;
+        }
+
+        &.selected {
+          color: $black;
+        }
+
+        &.disabled {
+          background-color: lighten(#ccc, 18%);
+          color: lighten(#737373, 40%);
+
+          &:hover {
+            color: lighten(#737373, 40%);
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .drop-down-options-wrapper {
+        border: 1px solid #a7a7a7;
+      }
+
+      .drop-down-label {
+        .toggle {
+          color: $black;
+        }
+      }
+    }
+
+    &.opened {
+      z-index: 11;
+      transition: z-index 0.4s ease 0s;
+
+      .toggle {
+        transform: rotate(180deg);
+        color: #5b5b5b;
+      }
+
+      .drop-down-options-wrapper {
+        box-shadow: 0 rem-calc(3) rem-calc(6) rgba(0, 0, 0, 0.1);
+        border-color: #d6d6d6;
+      }
+    }
+  }
+}

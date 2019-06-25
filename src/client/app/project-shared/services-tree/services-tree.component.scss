@@ -1,0 +1,250 @@
+@import '../../../assets/sass/shared';
+
+.services-list {
+  padding: em(95px) 0 em(75px);
+
+  @include breakpoint(small only) {
+    margin: 0 rem-calc(20);
+
+    .service-item {
+      height: rem-calc(140);
+      position: relative;
+      padding-left: rem-calc(140);
+
+      .diamond {
+        position: absolute;
+        width: rem-calc(120);
+        height: rem-calc(120);
+        left: 0;
+
+        .fill {
+          position: absolute;
+          top: rem-calc(25);
+          left: rem-calc(25);
+          width: rem-calc(80);
+          height: rem-calc(80);
+          transform: rotate(45deg) translate3d(0, 0, 0);
+          z-index: 5;
+        }
+
+        img {
+          position: absolute;
+          left: rem-calc(45);
+          top: rem-calc(40);
+          z-index: 10;
+        }
+
+        a {
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 12;
+        }
+      }
+
+      .text {
+        order: 1;
+        color: rgba(#202020, 0.6);
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        .h3 {
+          color: #202020;
+
+          a {
+            transition: color 0.35s ease;
+          }
+        }
+      }
+
+      .middle {
+        display: inline-block;
+        vertical-align: middle;
+        height: rem-calc(140);
+        width: 0;
+      }
+    }
+  }
+
+  @include breakpoint(average up) {
+    .list {
+      width: 100%;
+    }
+
+    .service-item {
+      width: 50%;
+      height: rem-calc(160);
+      position: relative;
+      margin-bottom: rem-calc(-60);
+
+      .diamond {
+        position: absolute;
+        width: rem-calc(160);
+        height: rem-calc(160);
+
+        .fill,
+        .fill-shade {
+          position: absolute;
+          z-index: 5;
+          top: rem-calc(25);
+          left: rem-calc(25);
+          width: rem-calc(110);
+          height: rem-calc(110);
+          transform: rotate(45deg) translate3d(0, 0, 0);
+        }
+
+        .fill-shade {
+          top: rem-calc(40);
+          left: rem-calc(40);
+          width: rem-calc(80);
+          height: rem-calc(80);
+          z-index: 4;
+          opacity: 0.5;
+          transition: transform 0.35s ease, opacity 0.35s ease;
+        }
+
+        img {
+          position: absolute;
+          left: rem-calc(56);
+          top: rem-calc(54);
+          z-index: 10;
+          opacity: 0.8;
+          transition: opacity 0.35s ease, transform 0.3s ease;
+          transform: translate3d(0, 0, 0);
+        }
+
+        a {
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 12;
+        }
+
+        &:hover {
+          img {
+            opacity: 1;
+          }
+        }
+      }
+
+      &.odd {
+        margin-left: 50%;
+        padding-left: rem-calc(145);
+
+        @include breakpoint(large up) {
+          padding-left: rem-calc(155);
+        }
+
+        @include breakpoint(x-large up) {
+          padding-left: rem-calc(160);
+        }
+
+        .diamond {
+          left: rem-calc(-30);
+        }
+      }
+
+      &.even {
+        text-align: right;
+        margin-right: 50%;
+        padding-right: rem-calc(145);
+
+        @include breakpoint(large up) {
+          padding-right: rem-calc(155);
+        }
+
+        @include breakpoint(x-large up) {
+          padding-right: rem-calc(160);
+        }
+
+        .diamond {
+          right: rem-calc(-30);
+        }
+      }
+
+      .text {
+        order: 1;
+        color: rgba(#202020, 0.6);
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        transition: all 0.35s ease;
+        transform: translate3d(0, 0, 0);
+
+        .h3 {
+          color: #202020;
+          margin-bottom: rem-calc(10);
+
+          @include breakpoint(large up) {
+            margin-bottom: rem-calc(16);
+          }
+
+          a {
+            transition: color 0.35s ease;
+          }
+        }
+      }
+
+      .middle {
+        display: inline-block;
+        vertical-align: middle;
+        height: rem-calc(160);
+        width: 0;
+      }
+
+      &.hovered {
+        &.odd {
+          .diamond {
+            img {
+              transform: translate3d(rem-calc(-5), 0, 0);
+            }
+
+            .fill-shade {
+              transform: rotate(45deg) translate3d(rem-calc(20), rem-calc(-20), 0);
+            }
+          }
+
+          .text {
+            transform: translate3d(rem-calc(10), 0, 0);
+          }
+        }
+
+        &.even {
+          .diamond {
+            img {
+              transform: translate3d(rem-calc(5), 0, 0);
+            }
+
+            .fill-shade {
+              transform: rotate(45deg) translate3d(rem-calc(-20), rem-calc(20), 0);
+            }
+          }
+
+          .text {
+            transform: translate3d(rem-calc(-10), 0, 0);
+          }
+        }
+      }
+    }
+
+    .h2 {
+      display: none;
+    }
+
+    .row {
+      margin: 0 rem-calc(20);
+
+      @include breakpoint(medium up) {
+        max-width: 1060px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

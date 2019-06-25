@@ -1,0 +1,35 @@
+<section
+    *ngFor="let news of news$ | async"
+    class="global-news_banner"
+    [style.backgroundImage]="'url(' + (news.main.previewPicture | addDefaultHost) + ')'">
+  <div class="row">
+    <article class="global-news" *ngIf="news.main">
+      <span class="marker">{{ 'COMPONENTS.RECENT_NEWS.MAIN_ELEMENT_LABEL' | translate }}</span>
+      <a routerLink="{{ 'URIPREFIX' | translate }}/press-center/news/{{ news.main.id }}">
+        <h1 class="title">{{ news.main.name }}</h1>
+      </a>
+    </article>
+    <div class="other-list_news">
+      <strong class="title">{{ 'COMPONENTS.RECENT_NEWS.OTHER_NEWS' | translate }}</strong>
+      <article
+          *ngFor="let element of news.others"
+          class="item-news">
+        <a routerLink="{{ 'URIPREFIX' | translate }}/press-center/news/{{ element.id }}">
+          <time datetime="2017-09-04" class="time">{{ element.createdDate }}</time>
+          <span class="title-news">{{ element.name }}</span>
+        </a>
+      </article>
+      <a routerLink="{{ 'URIPREFIX' | translate }}/press-center/news" class="all-news">{{ 'COMPONENTS.RECENT_NEWS.ALL_NEWS' | translate }}
+        <i class="icon-arrow_circle">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+               x="0px" y="0px" viewBox="0 0 66.1 66.1" xml:space="preserve">
+						<path class="st0" d="M33.1,66.1C14.8,66.1,0,51.3,0,33.1S14.8,0,33.1,0s33.1,14.8,33.1,33.1S51.3,66.1,33.1,66.1z M33.1,4
+							C17,4,4,17,4,33.1s13,29.1,29.1,29.1s29.1-13,29.1-29.1S49.1,4,33.1,4z"></path>
+            <rect x="19.9" y="31.7" class="st0" width="22.5" height="4"></rect>
+            <polygon class="st0" points="37.6,46.2 34.4,43.8 41.8,33.7 34.4,23.6 37.6,21.3 46.7,33.7"></polygon>
+          </svg>
+        </i>
+      </a>
+    </div>
+  </div>
+</section>

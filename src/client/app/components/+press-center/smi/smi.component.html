@@ -1,0 +1,28 @@
+<div class="title-banner" style="background-image: url(/assets/img/header/smi.jpg);">
+  <h1 class="h1">СМИ О НАС</h1>
+</div>
+<div class="global-page_content container">
+  <!--<div class="filter-content justify-content-start row">-->
+    <!--<form class="subscription-form" action="">-->
+      <!--<input type="text" class="subscription-input" name="subscription-input" value="" placeholder="Подписаться на новости: ">-->
+      <!--<button class="submit-btn"></button>-->
+    <!--</form>   -->
+    <!--<span class="btn btn-subscription">Подписаться на новости</span>-->
+  <!--</div>-->
+  <div class="news-list row">
+    <ng-container *ngIf="news$ | async as news">
+      <div *ngFor="let n of news"
+           class="{{ n.props.inSlider ? 'col-12 col-sm-6 col-md-4 col-xl-6 item big-item' : 'col-12 col-sm-6 col-md-4 col-xl-3 item' }}">
+        <a routerLink="{{ 'URIPREFIX' | translate }}/press-center/smi/{{ n.id }}">
+          <img [src]="n.previewPicture | addDefaultHost" [alt]="n.name">
+          <div class="text-info">
+            <time class="time">{{ n.createdDate }}</time>
+            <strong class="title">{{ n.name }}</strong>
+          </div>
+        </a>
+      </div>
+      <app-pagination-ui *ngIf="news.pageCount > 1" [total]="news.pageCount"
+                         [current]="news.currentPage" (paginate)="paginate($event)"></app-pagination-ui>
+    </ng-container>
+  </div>
+</div>

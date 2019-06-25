@@ -1,0 +1,36 @@
+$transtion: all 0.45s cubic-bezier(0.1, 0.36, 0.54, 1.02); 
+
+.btn{
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+	padding: 10px 25px;
+	text-transform: uppercase;
+	height: 100%;
+	transition:$transtion;
+	background: #0781cf;
+	color: #fff;
+	line-height: 30px;
+	&:hover{
+		background: #cacaca;
+	}
+	&:active{
+		box-shadow: 0 0 5px 0 rgba(#000,0.4);
+	}
+}
+
+.btn-join{
+	width:100%;
+	display:table;
+	max-width:400px;
+}
+
+@media(max-width:639px){
+	.btn{
+		font-size:14px;
+		padding:10px;
+	}
+	.btn-join{
+		min-width:100%;
+	}
+}

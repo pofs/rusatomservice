@@ -1,0 +1,58 @@
+<app-services-tree *ngIf="showTree"></app-services-tree>
+<ng-container *ngIf="!showTree && activity$ | async as activity">
+  <div class="title-banner"
+       *ngIf="activity.detailPicture"
+       [style.backgroundImage]="'url(' + (activity.detailPicture | addDefaultHost) +')'">
+    <h1 class="h1">{{ activity.name }}</h1>
+  </div>
+  <div class="global-page_content container">
+    <h1 class="h1" *ngIf="!activity.detailPicture">{{ activity.name }}</h1>
+    <div class="text-wrap" *ngIf="activity.detailText"
+         [innerHtml]="activity.detailText | addDefaultHost | sanitizeHtml"></div>
+    <ng-container *ngIf="activity.props.descriptions && activity.props.descriptions.length > 0">
+      <div class="text-wrap"
+           *ngFor="let textBlock of activity.props.descriptions"
+          [innerHtml]="textBlock | addDefaultHost | sanitizeHtml">
+      </div>
+    </ng-container>
+    <ng-container *ngIf="projects$ | async as projects">
+      <section class="global-slider" *ngIf="projects.length > 0">
+        <h2 class="h2">{{ 'PUBLIC.MENU.PROJECTS' | translate }}</h2>
+        <ngu-carousel [inputs]="carousel" (carouselLoad)="carouselLoad($event)">
+          <div ngu-item NguCarouselItem class="item" *ngFor="let project of projects">
+            <div class="box" [style.backgroundImage]="'url(' + (project.previewPicture | addDefaultHost) + ')'">
+              <div class="info-box">
+                <a routerLink="{{ 'URIPREFIX' | translate }}/projects/{{ project.id }}">
+                    <span class="geography">
+                      <i class="icon-g">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 370.9 512" xml:space="preserve">
+                            <path class="st0" d="M185.4,0C83.2,0,0,83.2,0,185.4c0,126.9,165.9,313.2,173,321c6.6,7.4,18.2,7.4,24.8,0
+                              c7.1-7.9,173-194.1,173-321C370.9,83.2,287.7,0,185.4,0z M185.4,278.7c-51.4,0-93.3-41.9-93.3-93.3s41.9-93.3,93.3-93.3
+                              s93.3,41.9,93.3,93.3S236.9,278.7,185.4,278.7z"></path>
+                        </svg>
+                      </i>
+                      {{ project.props.aes.name }}
+                    </span>
+                  <strong class="h3">{{ project.name }}</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button NguCarouselPrev class="arrow-slider arrow-prev leftRs">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                   viewBox="0 0 188.7 306" xml:space="preserve">
+                <polygon class="st0" points="153,306 188.7,270.3 71.4,153 188.7,35.7 153,0 0,153"></polygon>
+              </svg>
+          </button>
+          <button NguCarouselNext class="arrow-slider arrow-next rightRs">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="35.7,0 0,35.7 117.3,153 0,270.3 35.7,306 188.7,153"></polygon>
+              </svg>
+          </button>
+        </ngu-carousel>
+      </section>
+    </ng-container>
+  </div>
+</ng-container>

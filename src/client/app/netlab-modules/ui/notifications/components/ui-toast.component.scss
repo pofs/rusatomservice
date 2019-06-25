@@ -1,0 +1,163 @@
+@import '../../../../../assets/sass/shared';
+
+:host {
+  .toast {
+    perspective: 150px;
+    position: absolute;
+    z-index: 9999;
+    bottom: rem-calc(40);
+    right: rem-calc(40);
+    width: rem-calc(300);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    min-height: rem-calc(60);
+    transition: bottom 0.28s ease, right 0.28s ease;
+
+    .perspective-wrapper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      padding: rem-calc(16 20 16 70);
+      border-radius: rem-calc(4);
+      transform-origin: center;
+      transition: transform 0.1s ease;
+      background: $black;
+      z-index: 0;
+      box-shadow: 0 rem-calc(3) rem-calc(6) rgba(0, 0, 0, 0.1);
+
+      .toast-progress-loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        opacity: 0;
+        transition: opacity 0.28s ease;
+
+        span {
+          float: left;
+          height: 100%;
+          overflow: hidden;
+          position: relative;
+
+          span {
+            @keyframes bar-animation {
+              0% {
+                transform: translate3d(-100%, 0, 0);
+              }
+
+              100% {
+                transform: translate3d(100%, 0, 0);
+              }
+            }
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            animation-name: bar-animation;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+        }
+      }
+    }
+
+    &.first {
+      .perspective-wrapper {
+        .toast-progress-loader {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.last {
+      .perspective-wrapper {
+        box-shadow: 0 rem-calc(3) rem-calc(18) rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    &.error {
+      .perspective-wrapper {
+        background: #f44336;
+      }
+
+      .toast-progress-loader span {        background: #d32f2f;
+      }
+    }
+
+    &.success {
+      .perspective-wrapper {
+        background: #8bc34a;
+      }
+
+      .toast-progress-loader span {        background: #689f38;
+      }
+    }
+
+    &.alert {
+      .perspective-wrapper {
+        background: #ffdb5b;
+      }
+
+      .toast-progress-loader span {        background: #edc242;
+      }
+    }
+
+    &.info {
+      .perspective-wrapper {
+        background: #03a9f4;
+      }
+
+      .toast-progress-loader span {        background: #0288d1;
+      }
+    }
+
+    &.warn {
+      .perspective-wrapper {
+        background: #ffdb5b;
+      }
+
+      .toast-progress-loader span {        background: #edc242;
+      }
+    }
+
+    &.neutral {
+      .toast-progress-loader span {        background: #ccc;
+      }
+    }
+
+    .toast-icon {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      left: rem-calc(20);
+      font-size: rem-calc(32);
+      line-height: rem-calc(35);
+      height: rem-calc(35);
+      text-shadow: 0 rem-calc(3) rem-calc(8) rgba(0, 0, 0, 0.2);
+      transform: translate3d(0, -50%, 0);
+    }
+
+    .toast-title {
+      position: relative;
+      font-size: rem-calc(14);
+      font-weight: 600;
+      padding-bottom: rem-calc(5);
+      z-index: 1;
+    }
+
+    .toast-content {
+      position: relative;
+      font-size: rem-calc(13);
+      line-height: rem-calc(18);
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+$transtion: all 0.35s cubic-bezier(.7,.01,.45,1); 
+
+.our-projects_content{
+	padding-top: em(120px);
+	margin-bottom: em(90px);
+	.row{
+		padding:0 em(70px);
+	}
+	.list-projects{
+		display: flex;
+		margin: 0 -5px;
+		flex-wrap: wrap;
+		li{
+			position: relative;
+			flex: 0 0 calc(33.2333% - 5px);
+			height: 700px;
+			margin: 0 0 5px 5px;
+			transition:all 0.45s cubic-bezier(.7,.01,.45,1); 
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			&:hover{
+				&:after{
+					opacity: 0;
+				}
+				.info-box .geography{
+					opacity: 1;
+				}
+				.h3{
+					text-shadow: 2px 2px 3px rgba(#4c4c4c,1);
+				}
+			}
+    		a{
+				display: flex;
+	    		align-items: flex-end;
+				padding: 0 em(30px) em(65px);
+    			height: 100%;
+    		}
+			.info-box{
+				color:#fff;
+				position: relative;
+				z-index: 2;
+				.h3{
+					transition:all 0.45s cubic-bezier(.7,.01,.45,1); 
+					line-height: 33px;
+					margin-bottom:0;
+				}
+			}
+			&:after{
+				content:'';
+				z-index: 1;
+				transition:all 0.45s cubic-bezier(.7,.01,.45,1); 
+				width: 100%;
+				pointer-events: none;
+				height: 100%;
+				background: rgba(76,76,76,0);
+				background: -moz-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(60,60,60,0) 36%, rgba(32,32,32,0.8) 100%);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,0)), color-stop(36%, rgba(60,60,60,0)), color-stop(100%, rgba(32,32,32,0.8)));
+				background: -webkit-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(60,60,60,0) 36%, rgba(32,32,32,0.8) 100%);
+				background: -o-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(60,60,60,0) 36%, rgba(32,32,32,0.8) 100%);
+				background: -ms-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(60,60,60,0) 36%, rgba(32,32,32,0.8) 100%);
+				background: linear-gradient(to bottom, rgba(76,76,76,0) 0%, rgba(60,60,60,0) 36%, rgba(32,32,32,0.8) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#202020', GradientType=0 );
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+}
+@media(max-width: 1720px){
+	.our-projects_content .list-projects li .info-box{
+		min-height: 135px;
+	}
+}
+
+@media(max-width:1428px){
+	.our-projects_content{
+		.row{
+			padding:0 em(48px);
+		}
+		.list-projects{
+			li{
+				height:500px;
+			}
+		}
+	}
+}
+@media(max-width:1279px){
+	.our-projects_content{
+		padding-top: em(70px);
+		margin-bottom: 3.625em;
+		.list-projects{
+			margin: 0 -20px;
+			li{
+				flex: 0 0 calc(32.6333% - 20px);
+				height: 400px;
+				margin-left: 20px;
+				.info-box{
+					min-height: 125px;
+					.h3{
+						line-height: 30px;
+					}
+				}
+				a{
+					padding:0 1.45em 2.9em;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 959px){
+	.our-projects_content{
+		margin-bottom: 2.6em;
+		.list-projects{
+			margin: 0 -10px;
+			li{
+				margin-left: 10px;
+				flex: 0 0 calc(33% - 10px);
+				.info-box{
+					.h3{
+						font-size: 14px;
+						line-height: 26px;
+					}
+					.geography{
+						font-size: 12px;
+						.icon-g{
+							top: 0;
+						}
+					}
+				}
+				a{
+					padding: 0 10px 20px;
+				}
+			}
+		}
+		.row{
+			padding: 0 20px;
+		}
+	}
+}
+
+@media(max-width: 767px){
+	.our-projects_content{
+		padding-top: 2.5em;
+	}
+	.our-projects_content{
+		margin-bottom: 1.5em;
+		.list-projects{
+			margin: 0;
+			li{
+				height: 320px;
+				flex: 0 0 100%;
+				margin-bottom: 20px;
+				margin-left: 0;
+				.info-box{
+					min-height: 0;
+				}
+			}
+		}
+	}
+}
+@media(max-width: 479px){
+	.our-projects_content{
+		.row{
+			padding: 0 10px;
+		}
+		.list-projects{
+			li{
+				margin-bottom: 10px;
+				height: 260px;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,59 @@
+.git
+.github
+.vscode
+coverage
+
+# OS generated files #
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Node Files #
+node_modules
+npm-debug.log
+npm-debug.log.*
+package-lock.json
+yarn-error.log
+
+# compiled output
+/.cache
+/.server
+!.server/spa-server*.js
+/.temp
+/docs
+/public
+
+# Typing #
+src/typings/tsd
+typings
+tsd_typings
+
+# IDE #
+.idea
+*.swp
+
+# Angular #
+*.ngfactory.ts
+*.css.shim.ts
+*.ngsummary.json
+*.shim.ngstyle.ts
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+test-report.xml
+/typings
+yarn-error.log
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db

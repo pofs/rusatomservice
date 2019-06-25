@@ -1,0 +1,375 @@
+<div class="main inner-page" [perfectScrollbar] #scrollBar>
+  <ng-container *ngIf="project$ | async as project">
+    <section class="single-projects_content" *ngIf="!project.props.advanceTpl">
+      <div class="project-content_size container">
+        <h1 class="h1">{{ project.name }}</h1>
+        <section class="project-slider">
+          <div class="slider" *ngIf="project.props.projectSlider && project.props.projectSlider.length > 0">
+            <div class="slider-items">
+              <ngu-carousel [inputs]="galleryCarousel">
+                <div class="item" ngu-item NguCarouselItem
+                     *ngFor="let photo of project.props.projectSlider">
+                  <a (click)="box(photo)">
+                    <img [src]="photo.src | addDefaultHost" [alt]="project.name">
+                  </a>
+                </div>
+                <button NguCarouselPrev class="arrow-slider arrow-prev leftRs">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="153,306 188.7,270.3 71.4,153 188.7,35.7 153,0 0,153"></polygon>
+                </svg>
+                </button>
+                <button NguCarouselNext class="arrow-slider arrow-next rightRs">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="35.7,0 0,35.7 117.3,153 0,270.3 35.7,306 188.7,153"></polygon>
+                </svg>
+                </button>
+              </ngu-carousel>
+            </div>
+          </div>
+          <div class="figure-info_project row">
+            <div class="col-4 item" *ngIf="project.props.aes && aes$ | async as a">
+              <div class="box">
+                <img src="/assets/img/svg/mark-symbol.svg" alt="mark-symbol">
+                {{ a.props.location }}
+              </div>
+            </div>
+            <div class="col-4 item" *ngIf="project.props.aes">
+              <div class="box">
+                <img src="/assets/img/svg/factory.svg" alt="factory">
+                {{ project.props.aes.name }}
+              </div>
+            </div>
+            <div class="col-4 item">
+              <div class="box">
+                <img src="/assets/img/svg/calendar.svg" alt="calendar">
+                {{ project.props.start }} − {{ project.props.finish }}
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="text-wrap">
+          <div class="h2" *ngIf="project.props.resultsText"
+               [innerHtml]="project.props.resultsText | addDefaultHost | sanitizeHtml"></div>
+          <div *ngIf="project.props.description" [innerHtml]="project.props.description | addDefaultHost | sanitizeHtml"></div>
+        </div>
+        <div class="text-wrap" *ngIf="project.props.target">
+          <strong class="h2">{{ 'PUBLIC.PROJECT.GOAL' | translate }}</strong>
+          <div [innerHtml]="project.props.target | addDefaultHost | sanitizeHtml"></div>
+        </div>
+        <div class="text-wrap" *ngIf="project.props.resultsText">
+          <strong class="h2">{{ 'PUBLIC.PROJECT.RESULT' | translate }}</strong>
+          <div [innerHtml]="project.props.resultsText | addDefaultHost | sanitizeHtml"></div>
+        </div>
+        <ng-container *ngIf="projectsLike$ | async as projectsLike">
+        <section class="global-slider" *ngIf="projectsLike.length > 0">
+          <h2 class="h2">{{ 'PUBLIC.PROJECT.SIMILAR' | translate }}</h2>
+          <div class="slider">
+            <div class="slider-items">
+              <ngu-carousel [inputs]="similarCarousel">
+                <div class="item" ngu-item NguCarouselItem *ngFor="let projectLike of projectsLike">
+                  <div class="background-wrap" [style.backgroundImage]="'url(' + (projectLike.previewPicture | addDefaultHost) + ')'">
+                    <div class="info-box">
+                      <span class="geography" *ngIf="project.props.aes">
+                        <i class="icon-g">
+                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                               viewBox="0 0 370.9 512" xml:space="preserve">
+                            <path class="st0" d="M185.4,0C83.2,0,0,83.2,0,185.4c0,126.9,165.9,313.2,173,321c6.6,7.4,18.2,7.4,24.8,0
+                                c7.1-7.9,173-194.1,173-321C370.9,83.2,287.7,0,185.4,0z M185.4,278.7c-51.4,0-93.3-41.9-93.3-93.3s41.9-93.3,93.3-93.3
+                                s93.3,41.9,93.3,93.3S236.9,278.7,185.4,278.7z"></path>
+                          </svg>
+                        </i>
+                        {{ project.props.aes.name }}
+                      </span>
+                      <a routerLink="{{ 'URIPREFIX' | translate }}/projects/{{ projectLike.id }}">
+                        <strong class="h3">{{ projectLike.name }}</strong>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <button NguCarouselPrev class="arrow-slider arrow-prev leftRs">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="153,306 188.7,270.3 71.4,153 188.7,35.7 153,0 0,153"></polygon>
+                </svg>
+                </button>
+                <button NguCarouselNext class="arrow-slider arrow-next rightRs">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="35.7,0 0,35.7 117.3,153 0,270.3 35.7,306 188.7,153"></polygon>
+                </svg>
+                </button>
+              </ngu-carousel>
+            </div>
+          </div>
+        </section>
+        </ng-container>
+      </div>
+      <section class="next-project" *ngIf="project.next && project.next.id">
+        <a routerLink="{{ 'URIPREFIX' | translate }}/projects/{{ project.next.id }}">
+          <span>{{ 'PUBLIC.PROJECT.NEXT' | translate }}</span>
+          <strong class="h1">{{ project.next.name }}</strong>
+        </a>
+      </section>
+    </section>
+    <section class="single-projects_content" *ngIf="project.props.advanceTpl">
+      <article class="project_banner"
+               [style.backgroundImage]="'url(' + (project.detailPicture | addDefaultHost) + ')'">
+        <div class="project_banner_nav">
+          <span class="geography" *ngIf="project.props.aes">
+            <i class="icon-g">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 370.9 512"
+                   xml:space="preserve">
+                <path class="st0" d="M185.4,0C83.2,0,0,83.2,0,185.4c0,126.9,165.9,313.2,173,321c6.6,7.4,18.2,7.4,24.8,0
+                  c7.1-7.9,173-194.1,173-321C370.9,83.2,287.7,0,185.4,0z M185.4,278.7c-51.4,0-93.3-41.9-93.3-93.3s41.9-93.3,93.3-93.3
+                  s93.3,41.9,93.3,93.3S236.9,278.7,185.4,278.7z"></path>
+              </svg>
+            </i>
+            {{ project.props.aes.name }}
+          </span>
+          <span class="data">
+                          <i class="icon-data">
+                                  <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                       viewBox="0 0 51.2 52.8" xml:space="preserve">
+                                  <style type="text/css">
+                                      .icon-data .st0{fill:#FFFFFF;}
+                                      .icon-data .st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+                                  </style>
+                                  <path class="st0" d="M51.2,47.3c0,3.1-2.5,5.5-5.5,5.5c0,0,0,0,0,0H5.6c-3.1,0-5.5-2.5-5.6-5.5V11.9c0-3.1,2.5-5.5,5.6-5.5h40.1
+                                      c3.1,0,5.5,2.5,5.5,5.5c0,0,0,0,0,0V47.3z M48,11.9c0-1.3-1-2.3-2.3-2.3H5.6c-1.3,0-2.3,1.1-2.4,2.3v35.3c0,1.3,1.1,2.3,2.4,2.3
+                                      h40.1c1.3,0,2.3-1.1,2.3-2.3V11.9z"/>
+                                  <path class="st0" d="M11.2,15.2c-0.9,0-1.6-0.7-1.6-1.6c0,0,0,0,0,0v-12c0-0.9,0.7-1.6,1.6-1.6s1.6,0.7,1.6,1.6c0,0,0,0,0,0v12
+                                      C12.8,14.5,12.1,15.2,11.2,15.2C11.2,15.2,11.2,15.2,11.2,15.2z"/>
+                                  <path class="st0" d="M39.2,15.2c-0.9,0-1.6-0.7-1.6-1.6v-12c0-0.9,0.7-1.6,1.6-1.6c0.9,0,1.6,0.7,1.6,1.6v12
+                                      C40.8,14.5,40.1,15.2,39.2,15.2z"/>
+                                  <path class="st1" d="M33.8,25.8H6.7c-0.3,0-0.4-0.5-0.4-1s0.2-1,0.4-1h27.1c0.3,0,0.5,0.5,0.5,1S34.1,25.8,33.8,25.8z"/>
+                                  <path class="st1" d="M33.9,33.8H14.6c-0.2,0-0.3-0.5-0.3-1s0.1-1,0.3-1h19.3c0.2,0,0.3,0.5,0.3,1S34.1,33.8,33.9,33.8z"/>
+                                  <path class="st1" d="M34,41.8H19.5c-0.1,0-0.2-0.5-0.2-1s0.1-1,0.2-1H34c0.1,0,0.2,0.5,0.2,1S34.1,41.8,34,41.8z"/>
+                                  </svg>
+                              </i>
+            {{ project.props.start }} − {{ project.props.finish }}</span>
+        </div>
+        <h1 class="h1">{{ project.name }}</h1>
+      </article>
+      <div class="project-content_size container">
+        <div class="text-wrap">
+          <div *ngIf="project.props.resultsText" class="h2" [innerHtml]="project.props.resultsText | addDefaultHost | sanitizeHtml"></div>
+          <div *ngIf="project.props.description" [innerHtml]="project.props.description | addDefaultHost | sanitizeHtml"></div>
+        </div>
+
+        <section class="project-slider">
+          <div class="slider" *ngIf="project.props.projectSlider && project.props.projectSlider.length > 0">
+            <div class="slider-items">
+              <ngu-carousel [inputs]="galleryCarousel">
+                <div class="item" ngu-item NguCarouselItem
+                     *ngFor="let photo of project.props.projectSlider">
+                  <a (click)="box(photo)">
+                    <img [src]="photo.src | addDefaultHost" [alt]="project.name">
+                  </a>
+                </div>
+                <button NguCarouselPrev class="arrow-slider arrow-prev leftRs">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="153,306 188.7,270.3 71.4,153 188.7,35.7 153,0 0,153"></polygon>
+                </svg>
+                </button>
+                <button NguCarouselNext class="arrow-slider arrow-next rightRs">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="35.7,0 0,35.7 117.3,153 0,270.3 35.7,306 188.7,153"></polygon>
+                </svg>
+                </button>
+              </ngu-carousel>
+            </div>
+          </div>
+          <div class="figure-info_project row">
+            <div class="col-4 item" *ngIf="project.props.aes && aes$ | async as a">
+              <div class="box">
+                <img src="/assets/img/svg/mark-symbol.svg" alt="mark-symbol">
+                {{ a.props.location }}
+              </div>
+            </div>
+            <div class="col-4 item" *ngIf="project.props.aes">
+              <div class="box">
+                <img src="/assets/img/svg/factory.svg" alt="factory">
+                {{ project.props.aes.name }}
+              </div>
+            </div>
+            <div class="col-4 item">
+              <div class="box">
+                <img src="/assets/img/svg/calendar.svg" alt="calendar">
+                {{ project.props.start }} − {{ project.props.finish }}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-wrap" *ngIf="project.props.resultsText">
+          <strong class="h2">{{ 'PUBLIC.PROJECT.RESULT' | translate }}</strong>
+          <div [innerHtml]="project.props.resultsText | addDefaultHost | sanitizeHtml"></div>
+        </div>
+
+        <section class="interesting-facts" *ngIf="project.detailText">
+          <div [innerHtml]="project.detailText | addDefaultHost | sanitizeHtml"></div>
+        </section>
+
+        <section class="project-team" *ngIf="team$ | async as team">
+          <strong class="h2">{{ 'PUBLIC.PROJECT.RESPONSIBLE' | translate }}</strong>
+          <ngu-carousel [inputs]="teamCarousel">
+            <div class="item" ngu-item NguCarouselItem *ngFor="let person of team">
+              <div class="persone-img">
+                <div class="img"
+                     [style.backgroundImage]="'url(' + (person.previewPicture | addDefaultHost) + ')'"></div>
+              </div>
+              <strong class="name">{{ person.name }} {{ person.props.firstname }}</strong>
+              <p>{{ person.props.position }}</p>
+            </div>
+            <button NguCarouselPrev class="arrow-slider arrow-prev leftRs">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="153,306 188.7,270.3 71.4,153 188.7,35.7 153,0 0,153"></polygon>
+                </svg>
+            </button>
+            <button NguCarouselNext class="arrow-slider arrow-next rightRs">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="35.7,0 0,35.7 117.3,153 0,270.3 35.7,306 188.7,153"></polygon>
+                </svg>
+            </button>
+          </ngu-carousel>
+        </section>
+
+        <div class="text-wrap" *ngIf="project.props.target">
+          <strong class="h2">{{ 'PUBLIC.PROJECT.GOAL' | translate }}</strong>
+          <div [innerHtml]="project.props.target | addDefaultHost | sanitizeHtml"></div>
+        </div>
+
+        <section class="stages-list" *ngIf="steps$ | async as steps">
+          <div class="item" *ngFor="let step of steps; let i = index">
+            <span class="stages">ЭТАП</span>
+            <strong class="title">{{ step.name }}</strong>
+            <section class="shareholders-content">
+              <div class="row">
+                <strong class="h3">
+                  {{ 'PUBLIC.PROJECT.KEY_PARTNERS' | translate }}
+                </strong>
+                <ul class="shareholders-list">
+                  <li *ngFor="let partner of step.props.partners">
+                    <img [src]="(partner.previewPicture | addDefaultHost) || '/assets/img/blank.png'" [alt]="partner.name">
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <div class="text-wrap" *ngIf="step.props.work">
+              <strong class="h2">{{ 'PUBLIC.PROJECT.VOLUME' | translate }}</strong>
+              <ol *ngIf="stepsWork$(step, i) | async as stepWork">
+                <li *ngFor="let work of stepWork">
+                  <strong class="title">{{ work.name }}</strong>
+                  <div [innerHtml]="work.previewText | addDefaultHost | sanitizeHtml"></div>
+                </li>
+              </ol>
+            </div>
+            <div class="text-wrap" *ngIf="step.props.results">
+              <strong class="h2">{{ 'PUBLIC.PROJECT.RESULT' | translate }}</strong>
+              <ol *ngIf="stepsResults$(step, i) | async as stepResults">
+                <li *ngFor="let res of stepResults">
+                  <strong class="title">{{ res.name }}</strong>
+                  <div [innerHtml]="res.previewText | addDefaultHost | sanitizeHtml"></div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <section class="reviews-project" *ngIf="project.props.review">
+          <strong class="h2">{{ 'PUBLIC.PROJECT.REVIEW' | translate }}</strong>
+          <div class="row">
+            <div class="reviews-img" *ngIf="project.props.reviewImage" (click)="box(project.props.reviewImage)">
+              <img [src]="project.props.reviewImage.src | addDefaultHost" alt="ticket"/>
+            </div>
+            <div class="reviews-info">
+              <div class="persone">
+                <strong class="name">{{ project.props.reviewName }}</strong>
+                <span class="status">{{ project.props.reviewPosition }}</span>
+              </div>
+              <div class="text" [innerHtml]="project.props.review | addDefaultHost | sanitizeHtml"></div>
+              <!--<ul class="files-download row">-->
+                <!--<li class="col-6 col-md-4">-->
+                  <!--<a href="#">-->
+                    <!--<img src="/assets/img/pdf.png" alt="pdf">-->
+                    <!--<span class="name-file">Референция Минэнерго Болгарии</span>-->
+                    <!--<span class="size-file">8.29 МБ</span>-->
+                  <!--</a>-->
+                <!--</li>-->
+                <!--<li class="col-6 col-md-4">-->
+                  <!--<a href="#">-->
+                    <!--<img src="/assets/img/pdf.png" alt="pdf">-->
+                    <!--<span class="name-file">Референция Минэнерго Болгарии</span>-->
+                    <!--<span class="size-file">8.29 МБ</span>-->
+                  <!--</a>-->
+                <!--</li>-->
+                <!--<li class="col-6 col-md-4">-->
+                  <!--<a href="#">-->
+                    <!--<img src="/assets/img/pdf.png" alt="pdf">-->
+                    <!--<span class="name-file">Референция Минэнерго Болгарии</span>-->
+                    <!--<span class="size-file">8.29 МБ</span>-->
+                  <!--</a>-->
+                <!--</li>-->
+              <!--</ul>-->
+            </div>
+          </div>
+        </section>
+        <ng-container *ngIf="projectsLike$ | async as projectsLike">
+          <section class="global-slider" *ngIf="projectsLike.length > 0">
+            <h2 class="h2">{{ 'PUBLIC.PROJECT.SIMILAR' | translate }}</h2>
+            <div class="slider">
+              <div class="slider-items">
+                <ngu-carousel [inputs]="similarCarousel">
+                  <div class="item" ngu-item NguCarouselItem *ngFor="let projectLike of projectsLike">
+                    <div class="background-wrap" [style.backgroundImage]="'url(' + (projectLike.previewPicture | addDefaultHost) + ')'">
+                      <div class="info-box">
+                      <span class="geography" *ngIf="project.props.aes">
+                        <i class="icon-g">
+                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                               viewBox="0 0 370.9 512" xml:space="preserve">
+                            <path class="st0" d="M185.4,0C83.2,0,0,83.2,0,185.4c0,126.9,165.9,313.2,173,321c6.6,7.4,18.2,7.4,24.8,0
+                                c7.1-7.9,173-194.1,173-321C370.9,83.2,287.7,0,185.4,0z M185.4,278.7c-51.4,0-93.3-41.9-93.3-93.3s41.9-93.3,93.3-93.3
+                                s93.3,41.9,93.3,93.3S236.9,278.7,185.4,278.7z"></path>
+                          </svg>
+                        </i>
+                        {{ project.props.aes.name }}
+                      </span>
+                        <a routerLink="{{ 'URIPREFIX' | translate }}/projects/{{ projectLike.id }}">
+                          <strong class="h3">{{ projectLike.name }}</strong>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <button NguCarouselPrev class="arrow-slider arrow-prev leftRs">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="153,306 188.7,270.3 71.4,153 188.7,35.7 153,0 0,153"></polygon>
+                </svg>
+                  </button>
+                  <button NguCarouselNext class="arrow-slider arrow-next rightRs">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 188.7 306" xml:space="preserve">
+                  <polygon class="st0" points="35.7,0 0,35.7 117.3,153 0,270.3 35.7,306 188.7,153"></polygon>
+                </svg>
+                  </button>
+                </ngu-carousel>
+              </div>
+            </div>
+          </section>
+        </ng-container>
+      </div>
+      <section class="next-project" *ngIf="project.next && project.next.id">
+        <a routerLink="{{ 'URIPREFIX' | translate }}/projects/{{ project.next.id }}">
+          <span>{{ 'PUBLIC.PROJECT.NEXT' | translate }}</span>
+          <strong class="h1">{{ project.next.name }}</strong>
+        </a>
+      </section>
+    </section>
+  </ng-container>
+</div>

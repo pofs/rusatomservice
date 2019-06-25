@@ -1,0 +1,195 @@
+{
+  "APP_NAME": "RusAtomService",
+  "DEFAULT_TITLE": "RusAtomService",
+  "DEFAULT_META_DESCRIPTION": "RusAtomService",
+  "URIPREFIX": "/en",
+  "LOGO": "/assets/img/logo_en.svg",
+  "PUBLIC": {
+    "HOMEPAGE": {
+      "SHAREHOLDERS": "Shareholders"
+    },
+    "MENU": {
+      "ACTIVITIES": "Product line",
+      "ABOUT": {
+        "ABOUT": "About",
+        "ATOMTEHEXPORT": "ATEX",
+        "ADVANTAGES": "Advantages",
+        "PARTNERS": "Partners",
+        "CERTIFICATES": "Certificates",
+        "TEAM": "Team",
+        "ATEX_TEAM": "Team",
+        "REVIEWS": "References",
+        "SUPPLIERS": "For suppliers",
+        "ANTICORRUPTION": "Anti-corruption policy",
+        "VACANCIES": "Vacancies",
+        "VACANCIESALL": "Current vacancies",
+        "CANDIDATES": "Candidates"
+      },
+      "ATOMTECHEXPORT": "Atex",
+      "PROJECTS": "Projects",
+      "PRESSCENTER": {
+        "PRESSCENTER": "Media-center",
+        "NEWS": "News",
+        "COMP_NEWS": "Company news",
+        "OTR_NEWS": "Industry news",
+        "SMI": "SMI",
+        "GALLERY": "Photogallery",
+        "IDENTITY": "Corporate identity"
+      },
+      "CONTACTS": "Contacts"
+    },
+    "HOME": {
+      "PAGE_TITLE": "Rusatom Service",
+      "META_DESCRIPTION": "Русатом Сервис"
+    },
+    "ABOUT": {
+      "PAGE_TITLE": "Rusatom Service - О компании",
+      "META_DESCRIPTION": "О компании",
+      "RUSATOMSERVICE": {
+        "PAGE_TITLE": "Rusatom Service",
+        "META_DESCRIPTION": "Русатом Сервис",
+        "TITLE": "Rusatom Service"
+      },
+      "ATEX": {
+        "PAGE_TITLE": "ATEX",
+        "META_DESCRIPTION": "",
+        "TITLE": "Atomtehexport",
+        "HISTORY_TITLE": "History",
+        "COMPETENCIES_TITLE": "Competencies",
+        "CERTIFICATES_TITLE": "Certificates and licenses"
+      },
+      "ATEX_TEAM": {
+        "PAGE_TITLE": "ATEX Team",
+        "TITLE": "ATEX Team",
+        "META_DESCRIPTION": "ATEX Team"
+      },
+      "ADVANTAGES": {
+        "PAGE_TITLE": "Advantages",
+        "META_DESCRIPTION": "Advantages",
+        "TITLE": "Advantages",
+        "FOR_CLIENTS": "For clients",
+        "FOR_SUPPLIERS": "For suppliers"
+      },
+      "PARTNERS": {
+        "PAGE_TITLE": "Partners",
+        "TITLE": "Partners",
+        "META_DESCRIPTION": "Partners"
+      },
+      "CERTIFICATES": {
+        "PAGE_TITLE": "Certificates",
+        "TITLE": "Certificates",
+        "META_DESCRIPTION": "Certificates"
+      },
+      "REVIEWS": {
+        "PAGE_TITLE": "References",
+        "TITLE": "References",
+        "META_DESCRIPTION": "References"
+      },
+      "TEAM": {
+        "PAGE_TITLE": "Rusatomservice Team",
+        "TITLE": "Rusatomservice Team",
+        "META_DESCRIPTION": "Rusatomservice Team"
+      },
+      "SUPPLIERS": {
+        "PAGE_TITLE": "For suppliers",
+        "TITLE": "For suppliers",
+        "META_DESCRIPTION": "For suppliers"
+      },
+      "ANTICORRUPTION": {
+        "TITLE": "Anti-corruption policy",
+        "PAGE_TITLE": "Anti-corruption policy",
+        "META_DESCRIPTION": "Anti-corruption policy"
+      },
+      "VACANCIESALL": {
+        "TITLE": "ТЕКУЩИЕ ВАКАНСИИ",
+        "PAGE_TITLE": "ТЕКУЩИЕ ВАКАНСИИ",
+        "META_DESCRIPTION": "ТЕКУЩИЕ ВАКАНСИИ"
+      },
+      "CANDIDATES": {
+        "TITLE": "КАДРОВЫЙ РЕЗЕРВ",
+        "PAGE_TITLE": "КАДРОВЫЙ РЕЗЕРВ",
+        "META_DESCRIPTION": "КАДРОВЫЙ РЕЗЕРВ"
+      }
+    },
+    "ACTIVITIES": {
+      "PAGE_TITLE": "PRODUCT LINE",
+      "META_DESCRIPTION": "PRODUCT LINE"
+    },
+    "PROJECTS": {
+      "PAGE_TITLE": "Projects",
+      "TITLE": "Projects",
+      "META_DESCRIPTION": "Projects",
+      "HOW_TO_JOIN": "",
+      "WORKDIRECTIONS": "Product offering",
+      "AES": "NPP",
+      "ALL": "All"
+    },
+    "PROJECT": {
+      "GOAL": "Objective of the project",
+      "RESULT": "Results",
+      "SIMILAR": "Similar projects",
+      "TEAM": "Team",
+      "STAGE": "Stage",
+      "REVIEW": "Review",
+      "KEY_PARTNERS": "Key partners",
+      "VOLUME": "Volume of work",
+      "NEXT": "Next project",
+      "RESPONSIBLE": "Responsible"
+    },
+    "NEWS": {
+      "PAGE_TITLE": "Media center",
+      "TITLE": "Media center",
+      "META_DESCRIPTION": "Media center"
+    },
+    "COMPANY_NEWS": {
+      "PAGE_TITLE": "Company news",
+      "TITLE": "Company news",
+      "META_DESCRIPTION": "Company news"
+    },
+    "OTRASLY_NEWS": {
+      "PAGE_TITLE": "Industry news",
+      "TITLE": "Industry news",
+      "META_DESCRIPTION": "Industry news"
+    },
+    "GALLERY": {
+      "PAGE_TITLE": "Photo gallery",
+      "TITLE": "Photo gallery",
+      "META_DESCRIPTION": "Photo gallery"
+    },
+    "CORPORATE_IDENTITY": {
+      "PAGE_TITLE": "Corporate identity",
+      "TITLE": "Corporate identity",
+      "META_DESCRIPTION": "Corporate identity"
+    },
+    "CONTACTS": {
+      "PAGE_TITLE": "Contacts",
+      "TITLE": "Contacts",
+      "META_DESCRIPTION": "Contacts",
+      "ADDRESS_TITLE": "Address",
+      "ADDRESS": "119071, Moscow, Leninsky ave, 15A",
+      "PHONE_TITLE": "Phone",
+      "FAX_TITLE": "Fax",
+      "Q_TITLE": "For any questions",
+      "COMPLAINTS_TITLE": "For references and complaints",
+      "PRESS_TITLE": "Press office",
+      "FEEDBACK_TITLE": "Feedback",
+      "MAP_TITLE": "Rusatom Service",
+      "FEEDBACK_NAME": "Name",
+      "FEEDBACK_PHONE": "Phone",
+      "FEEDBACK_MESSAGE": "Message",
+      "FEEDBACK_ACCEPT_TERMS": "I agree to the Terms of Service and Privacy Policy",
+      "FEEDBACK_SEND": "Send",
+      "FEEDBACK_SUCCESS_TEXT": "Success! We will contact you shortly."
+    }
+  },
+  "COMPONENTS": {
+    "RECENT_NEWS": {
+      "MAIN_ELEMENT_LABEL": "Main news",
+      "OTHER_NEWS": "Other news",
+      "ALL_NEWS": "All news"
+    },
+    "RECENT_PROJECTS": {
+      "HEADING": "Our projects"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+﻿<section class="trigger-services services-list">
+  <h2 class="h2">{{ 'PUBLIC.MENU.ACTIVITIES' | translate }}</h2>
+  <div class="row">
+    <ul class="list">
+      <li *ngFor="let workdirection of workdirections$ | async; let e = even; let o = odd">
+        <div class="service-item" [class.even]="e" [class.odd]="o" [class.hovered]="isHovered(workdirection)">
+          <div class="diamond"
+               (mouseenter)="hovered(workdirection)"
+               (mouseleave)="unHovered(workdirection)">
+            <a routerLink="{{ 'URIPREFIX' | translate }}/activities/{{workdirection.id}}"></a>
+            <div class="fill" [style.backgroundColor]="workdirection.props.color"></div>
+            <div class="fill-shade" [style.backgroundColor]="workdirection.props.color"></div>
+            <img [src]="workdirection.props.image" title="{{ workdirection.name }}" alt="service-fig1">
+          </div>
+          <div class="text">
+            <strong class="h3"><a
+                (mouseenter)="hovered(workdirection)"
+                (mouseleave)="unHovered(workdirection)"
+                routerLink="{{ 'URIPREFIX' | translate }}/activities/{{workdirection.id}}"
+                [style.color]="getColorFor(workdirection)">{{ workdirection.name }}</a></strong>
+            <p>{{ workdirection.previewText }}</p>
+          </div>
+          <div class="middle"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

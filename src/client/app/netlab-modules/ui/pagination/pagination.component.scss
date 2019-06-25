@@ -1,0 +1,62 @@
+@import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/mixins';
+
+:host {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: rem-calc(20);
+
+  button {
+    font-size: rem-calc(14);
+    line-height: rem-calc(20);
+    display: inline-block;
+    padding: rem-calc(5 10);
+    margin: rem-calc(0 6);
+    color: $dark-gray;
+    outline: none;
+    transition: color 0.35s ease, opacity 0.3s ease;
+    cursor: pointer;
+
+    &:active {
+      color: $black;
+    }
+
+    &.current {
+      color: $black;
+      cursor: default;
+    }
+
+    &.prev-page,
+    &.next-page {
+      display: none;
+
+      @include breakpoint(medium up) {
+        display: initial;
+      }
+
+      svg {
+        display: block;
+        //width: rem-calc(41);
+        height: rem-calc(11);
+      }
+    }
+
+    &[disabled] {
+      opacity: 0.2;
+      cursor: default;
+    }
+
+    @include breakpoint(medium up) {
+      font-size: rem-calc(16);
+      line-height: rem-calc(22);
+      margin: rem-calc(0 16);
+    }
+
+    @include breakpoint(large up) {
+      font-size: rem-calc(18);
+      line-height: rem-calc(24);
+      margin: rem-calc(0 20);
+    }
+  }
+}

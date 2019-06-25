@@ -1,0 +1,22 @@
+.geography{
+	display:block;
+	opacity: 0.5;
+	font-size:14px;
+	text-transform: uppercase;
+	transition:all 0.45s cubic-bezier(.7,.01,.45,1); 
+	margin-bottom: 15px;
+	padding-left: 20px;
+	position: relative;
+	.icon-g{
+		position: absolute;	
+		left: 0;
+		top: 2px;
+		svg{
+			width: 12px;
+			display: block;
+		}
+		.st0{
+			fill: #fff;
+		}
+	}
+}

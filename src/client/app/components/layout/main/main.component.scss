@@ -1,0 +1,52 @@
+@import '../../../../assets/sass/shared';
+
+.inner-page-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($black, 0.85);
+  z-index: 10;
+}
+
+.home-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  .main-block {
+    top: rem-calc(50);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 10;
+
+    @include breakpoint(medium up) {
+      top: rem-calc(60);
+    }
+
+    @include breakpoint(large up) {
+      top: rem-calc(75);
+    }
+  }
+}
+
+.content-wrapper {
+  &.home {
+    .back-to-home {
+      opacity: 0;
+    }
+
+    .inner-page-overlay {
+      opacity: 0;
+      display: none;
+    }
+  }
+}

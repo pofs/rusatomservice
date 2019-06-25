@@ -1,0 +1,55 @@
+<div class="main inner-page">
+  <div class="no-gutters row">
+    <div class="contacts-content">
+      <aside class="contact-sidebar">
+        <h1 class="h1">{{ 'PUBLIC.CONTACTS.TITLE' | translate }}</h1>
+        <ul class="contact-list">
+          <li class="address">
+            <span class="title">{{ 'PUBLIC.CONTACTS.ADDRESS_TITLE' | translate }}</span>
+            <address>
+              {{ 'PUBLIC.CONTACTS.ADDRESS' | translate }}
+            </address>
+          </li>
+          <li class="tel">
+            <span class="title">{{ 'PUBLIC.CONTACTS.PHONE_TITLE' | translate }}</span>
+            <a href="tel:+7(495)9957580">+7 (495) 995 75 80</a>
+          </li>
+          <li class="fax">
+            <span class="title">{{ 'PUBLIC.CONTACTS.FAX_TITLE' | translate }}</span>
+            <a href="tel:+7(495)9957582">+7 (495) 995 75 82</a>
+          </li>
+          <li class="mail">
+            <span class="title">{{ 'PUBLIC.CONTACTS.Q_TITLE' | translate }}</span>
+            <a href="mailto:info@rusatomservice.ru">info@rusatomservice.ru</a>
+          </li>
+          <li class="mail">
+            <span class="title">{{ 'PUBLIC.CONTACTS.COMPLAINTS_TITLE' | translate }}</span>
+            <a href="mailto:qc@rusatomservice.ru">qc@rusatomservice.ru</a>
+          </li>
+          <li class="mail">
+            <span class="title">{{ 'PUBLIC.CONTACTS.PRESS_TITLE' | translate }}</span>
+            <a href="mailto:pr@rusatomservice.ru">pr@rusatomservice.ru</a>
+          </li>
+        </ul>
+        <span class="btn" (click)="openFeedbackForm()" id="btn-callback">{{ 'PUBLIC.CONTACTS.FEEDBACK_TITLE' | translate }}</span>
+      </aside>
+      <div class="contact-map">
+        <agm-map
+            [latitude]="55.720894"
+            [longitude]="37.600577"
+            [zoom]="15"
+            [disableDefaultUI]="false"
+            [zoomControl]="false">
+          <agm-marker
+              [latitude]="55.720894"
+              [longitude]="37.600577"
+              [markerDraggable]="false">
+            <agm-info-window>
+              <strong>{{ 'PUBLIC.CONTACTS.MAP_TITLE' | translate }}</strong>
+            </agm-info-window>
+          </agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+</div>

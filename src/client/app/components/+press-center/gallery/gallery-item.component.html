@@ -1,0 +1,20 @@
+<div class="global-page_content container">
+  <h1 class="h1" *ngIf="element$ | async as element">{{ element.name }}</h1>
+  <ng-container *ngIf="news$ | async as news">
+    <div class="news-list row">
+      <div class="col-12 col-sm-6 col-md-4 col-xl-3 item" *ngFor="let n of news">
+        <a (click)="box(n.detailPicture)" *ngIf="!n.props.video">
+          <img [src]="n.previewPicture | addDefaultHost" [alt]="n.name">
+          <span class="title">{{ n.name }}</span>
+        </a>
+        <div class="v" *ngIf="n.props.video">
+          <video [width]="n.props.video.width" [height]="n.props.video.height"
+                 [poster]="n.previewPicture | addDefaultHost"
+                 controls>
+            <source [src]="n.props.video.path | addDefaultHost" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

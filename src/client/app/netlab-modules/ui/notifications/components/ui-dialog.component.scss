@@ -1,0 +1,131 @@
+@import '../../../../../assets/sass/shared';
+
+:host {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: rem-calc(150);
+  bottom: 0;
+  z-index: auto;
+
+  .dialog {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: rem-calc(20 30 20 30);
+    background-color: #fff;
+    box-shadow: 0 rem-calc(10) rem-calc(15) 0 rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+
+    @include breakpoint(medium up) {
+      padding: rem-calc(30 50 30 50);
+      width: rem-calc(500);
+    }
+
+    &.not-on-top {
+      opacity: 0.6;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      height: rem-calc(8);
+      top: 0;
+    }
+
+    .close {
+      position: absolute;
+      top: rem-calc(25);
+      right: rem-calc(25);
+      cursor: pointer;
+
+      svg {
+        display: block;
+        width: rem-calc(20);
+        height: rem-calc(20);
+      }
+    }
+
+    .dialog-title {
+      color: $black;
+      font-size: rem-calc(20);
+      font-weight: 600;
+      line-height: rem-calc(33);
+      padding-bottom: rem-calc(20);
+    }
+
+    .dialog-text {
+      color: $dark-gray;
+      font-size: rem-calc(14);
+      line-height: rem-calc(25);
+      padding-bottom: rem-calc(20);
+    }
+
+    .dialog-buttons {
+      text-align: center;
+      margin: rem-calc(0 -30 -20 -30);
+      padding-top: rem-calc(20);
+      padding-bottom: rem-calc(20);
+      border-radius: rem-calc(8);
+
+      .button {
+        margin-left: rem-calc(20);
+        display: inline-block;
+        padding: rem-calc(12 25);
+        margin-bottom: 0;
+        transition: all 0.35s ease;
+        transform: scaleX(1) scaleY(1);
+
+        &:active {
+          transform: scaleX(0.98) scaleY(0.96);
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &.info {
+      overflow: hidden;
+
+      &:before {
+        background-color: $light-gray;
+      }
+    }
+
+    &.success {
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        background-color: $green;
+      }
+    }
+
+    &.warn {
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        background-color: $orange;
+      }
+    }
+
+    &.error {
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        background-color: $red;
+      }
+    }
+  }
+}

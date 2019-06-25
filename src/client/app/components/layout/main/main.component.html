@@ -1,0 +1,12 @@
+﻿<div [@routeAnimation]="getState(o)" [ngClass]="wrapperClass">
+  <div class="home-content">
+    <app-header></app-header>
+    <div class="main-block" [perfectScrollbar]>
+      <app-home></app-home>
+      <app-footer></app-footer>
+    </div>
+  </div>
+  <div [routerLink]="['/']" class="inner-page-overlay"></div>
+  <router-outlet #o="outlet"></router-outlet>
+</div>
+<app-ui-notifications></app-ui-notifications>

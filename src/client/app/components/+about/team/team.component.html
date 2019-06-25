@@ -1,0 +1,25 @@
+<div class="global-page_content container">
+  <h1>{{ title | translate }}</h1>
+  <div class="filter-content justify-content-start row" *appIfLocale="'ru'">
+    <div class="sort-items">
+      <a (click)="showAll()" class="item" [class.active]="!position">Все</a>
+      <a (click)="showPosition(7)" class="item" [class.active]="position === 7">Руководство</a>
+      <a (click)="showPosition(6)" class="item" [class.active]="position === 6">Сотрудники</a>
+    </div>
+  </div>
+  <div class="team-list row" [class.team-other_list]="atex">
+    <ng-container *ngIf="team$ | async as team">
+      <div *ngFor="let e of team"
+           [class]="getClassFor(e)">
+        <div class="bg-wrap">
+          <div class="picture" [style.backgroundImage]="'url(' + (e.previewPicture | addDefaultHost) + ')'"></div>
+          <div class="persone-info">
+            <strong class="name">{{ e.name }} {{ e.props.firstname }}</strong>
+            <span class="status">{{ e.props.position }}</span>
+          </div>
+        </div>
+      </div>
+      <app-pagination-ui *ngIf="team.pageCount > 1" [total]="team.pageCount" [current]="team.currentPage" (paginate)="paginate($event)"></app-pagination-ui>
+    </ng-container>
+  </div>
+</div>

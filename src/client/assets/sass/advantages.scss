@@ -1,0 +1,50 @@
+$transtion: all 0.45s cubic-bezier(0.1, 0.36, 0.54, 1.02); 
+
+.advantages-box{
+	img{
+		display: table;
+		margin-bottom: 20px;
+	}
+	&.first-box{
+
+	}
+	&.second-box{
+
+	}
+	.advantages-list{
+		margin: 0 -22px em(30px);
+		.item{
+			padding: 0 22px;
+			margin-bottom: 30px;
+			.box{
+				height:300px;
+				transition: $transtion;
+				padding: 35px 75px 35px 35px;
+				color:#fff;
+				display: block;
+				line-height: 30px;
+				font-size:16px;
+				transform: scale(1);
+				img{
+					display: block;
+					margin: 0 0 22px;
+				}
+				&:hover{
+					transform: scale(1.03);
+				}
+			}
+		}
+	}
+}
+
+@media(max-width:991px){
+	.advantages-box .advantages-list{
+		margin:0 -10px 10px;
+		 .item{
+			padding:0 10px;
+			.box{
+				font-size:18px;
+			}
+		}
+	}
+}

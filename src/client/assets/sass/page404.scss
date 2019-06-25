@@ -1,0 +1,38 @@
+.page404{
+	.wrapper{
+		padding-left:0;
+	}
+}
+.box404 {
+	min-height:100vh;
+	background: url(/assets/img/page404.jpg) no-repeat;
+	background-size:contain;
+	display: table;
+	background-position: center;
+    width: 100%;
+	.box{
+		vertical-align: middle;
+		display: table-cell;
+	}
+	.h1{
+		font-weight: 700;
+		font-size:60px;
+		color:#202020;
+		margin-bottom:20px;
+	}
+	.btn{
+		max-width: 300px;
+		width: 100%;
+		line-height:35px;
+		display:table;
+	}
+}
+
+@media(max-width:1023px){
+	.box404{
+		background: none;
+		.h1{
+			font-size:30px;
+		}
+	}
+}

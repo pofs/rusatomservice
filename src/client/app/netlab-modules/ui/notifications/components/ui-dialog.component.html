@@ -1,0 +1,23 @@
+<div class="dialog"
+     (document:keyup.esc)="escape($event)"
+     [class.not-on-top]="!onTop"
+     [ngClass]="dialog.options.type"
+     [style.top.px]="index * 10">
+  <div (click)="close($event)"
+       *ngIf="dialog.options.showClose"
+    class="close">
+    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+      <rect transform="rotate(-45 10,10)" height="16" width="2" y="2" x="9" stroke-width="0" fill="#000000"></rect>
+      <rect transform="rotate(45 10,10)" height="16" width="2" y="2" x="9" stroke-width="0" fill="#000000"></rect>
+    </svg>
+  </div>
+  <div class="dialog-title">{{ dialog.options.title }}</div>
+  <div class="dialog-text" *ngIf="!dialog.options.component">
+    {{ dialog.options.content }}
+  </div>
+  <template #container></template>
+  <div class="dialog-buttons" *ngIf="!dialog.options.alert && !dialog.options.component">
+    <button (click)="accept($event)" class="button">{{ dialog.options.acceptButtonText }}</button>
+    <button (click)="decline($event)" class="button simple">{{ dialog.options.declineButtonText }}</button>
+  </div>
+</div>

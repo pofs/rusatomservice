@@ -1,0 +1,38 @@
+.stages-list{
+	counter-reset: stages;
+	.stages{
+		font-size:em(60px);
+		display:block;
+		margin-bottom: 10px;
+		display: block;
+		font-weight: 600;
+		color:rgba(#0781cf,0.35);
+		&:before{
+			margin-right: 10px;
+			content: counter(stages);
+    		counter-increment: stages;
+		}
+	}
+	.item{
+		margin-bottom:em(60px);
+		> .title{
+			font-size: em(33px);
+			font-weight: 600;
+		}
+	}
+	.shareholders-content{
+		margin:0 0 em(60px);
+		.row{
+			padding:0;
+		}
+		.h3{
+			margin-bottom:30px;
+		}
+	}
+}
+
+@media(max-width:767px){
+	.stages-list .stages{
+		font-size:em(40px);
+	}
+}

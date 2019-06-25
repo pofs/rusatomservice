@@ -1,0 +1,25 @@
+<div class="title-banner" style="background-image: url(/assets/img/header/otsivi.jpg);">
+  <h1 class="h1">{{ 'PUBLIC.ABOUT.REVIEWS.TITLE' | translate }}</h1>
+  <!--<div class="text" *appIfLocale="'ru'">-->
+    <!--<p>Это - Инжиниринговая компания, комплексно решающая вопросы эксплуатационного сопровождения предконтрактных работ,-->
+      <!--сооружения, ввода в эксплуатацию и эксплуатации энергоблоков зарубежных АЭС.</p>-->
+  <!--</div>-->
+  <!--<div class="text" *appIfLocale="'en'">-->
+    <!--<p>Is an engineering company dealing holistically with the matters of operational maintenance of precontractual-->
+      <!--works, construction, commissioning and operation of foreign NPP power units.</p>-->
+  <!--</div>-->
+</div>
+<div class="global-page_content container">
+  <ng-container *ngIf="references$ | async as references">
+    <ul class="certificates-list five-grid_list row">
+      <li class="col-3 col-md-3 item" *ngFor="let reference of references">
+        <a (click)="open(reference)">
+          <img [src]="reference.detailPicture | addDefaultHost" [alt]="reference.name">
+          <div class="info">
+            <p>{{ reference.name }}</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </ng-container>
+</div>

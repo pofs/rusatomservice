@@ -1,0 +1,25 @@
+.filter-content{
+	margin:0 0 10px;
+	justify-content: space-between;
+	.btn{
+		margin-bottom:10px;
+	}
+}
+
+@media(max-width:1199px){
+	.filter-content{
+		.btn{
+			flex:0 0 100%;
+		}
+	}
+}
+
+@media(max-width:969px){
+	.filter-content{
+		margin-bottom:15px;
+		.btn{
+			display:table;
+			margin-bottom:10px;
+		}
+	}
+}

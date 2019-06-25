@@ -1,0 +1,33 @@
+<div class="title-banner" style="background-image: url(/assets/img/header/preimuschestva.jpg);">
+    <h1 class="h1">{{ 'PUBLIC.ABOUT.ADVANTAGES.TITLE' | translate }}</h1>
+  </div>
+  <div class="global-page_content container">
+    <div class="advantages-box first-box">
+      <img src="/assets/img/svg/factory.svg" width="100px" alt="img">
+      <h2 class="h2">{{ 'PUBLIC.ABOUT.ADVANTAGES.FOR_CLIENTS' | translate }}</h2>
+      <ng-container *ngIf="customerAdvantages$ | async as customerAdvantages">
+        <ul class="advantages-list row">
+          <li class="col-12 col-sm-6 col-lg-4 item" *ngFor="let customerAdvantage of customerAdvantages">
+            <div class="box" [style.backgroundColor]="customerAdvantage.props.color">
+              <img [src]="'/assets/img/advantages/' + customerAdvantage.props.icon" [alt]="customerAdvantage.name">
+              {{ customerAdvantage.name }}
+            </div>
+          </li>
+        </ul>
+      </ng-container>
+    </div>
+    <div class="advantages-box second-box">
+      <img src="/assets/img/svg/handshake.svg" width="100px" alt="img">
+      <h2 class="h2">{{ 'PUBLIC.ABOUT.ADVANTAGES.FOR_SUPPLIERS' | translate }}</h2>
+      <ng-container *ngIf="dealerAdvantages$ | async as advantages">
+        <ul class="advantages-list row">
+          <li class="col-12 col-sm-6 col-lg-4 item" *ngFor="let advantage of advantages">
+            <div class="box" [style.backgroundColor]="advantage.props.color">
+              <img [src]="'/assets/img/advantages/' + advantage.props.icon" [alt]="advantage.name">
+              {{ advantage.name }}
+            </div>
+          </li>
+        </ul>
+      </ng-container>
+    </div>
+  </div>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="47px" viewBox="0 0 41 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>55</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-4.000000, -4.000000)">
+            <g id="55" transform="translate(4.000000, 4.000000)">
+                <path d="M41,24 L36,16 C34.6666667,5.66666667 28.8333333,0.5 18.5,0.5 C3,0.5 0,13 0,17.5 C0,22.5 2.83333333,27.3333333 8.5,32 L8.5,40.2792408 C8.5,40.7096712 8.77543009,41.09181 9.18377223,41.2279241 L25.1837722,46.5612574 C25.7077156,46.7359052 26.2740355,46.4527452 26.4486833,45.9288019 C26.4826721,45.8268354 26.5,45.7200562 26.5,45.6125741 L26.5,37 L35,37 C35.5522847,37 36,36.5522847 36,36 L36,28 C37.4281766,27.1241253 38.4281766,26.4574587 39,26 C39.5718234,25.5425413 40.23849,24.8758747 41,24 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                <ellipse id="Oval-5" stroke="#A171B7" stroke-width="2" transform="translate(19.500000, 18.605263) rotate(-328.000000) translate(-19.500000, -18.605263) " cx="19.5" cy="18.6052632" rx="3.86842105" ry="10.5"></ellipse>
+                <ellipse id="Oval-5-Copy" stroke="#A171B7" stroke-width="2" transform="translate(19.500000, 18.605263) scale(-1, 1) rotate(-328.000000) translate(-19.500000, -18.605263) " cx="19.5" cy="18.6052632" rx="3.86842105" ry="10.5"></ellipse>
+                <ellipse id="Oval-6" stroke="#A171B7" stroke-width="2" cx="19.5" cy="18.6052632" rx="10.5" ry="3.86842105"></ellipse>
+                <g id="7-copy" transform="translate(9.000000, 14.000000)"></g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,27 @@
+<div class="toast"
+     [style.right]="(40 + index * 5) + 'px'"
+     [style.bottom]="(40 + index * 5) + 'px'"
+     [@enterLeave]="state"
+     (click)="onClick($event)"
+     [ngClass]="{
+            'first': onTop,
+            'last': index === 0,
+            'alert': toast.options.type === 'alert',
+            'error': toast.options.type === 'error',
+            'warn': toast.options.type === 'warn',
+            'success': toast.options.type === 'success',
+            'info': toast.options.type === 'info',
+            'neutral': !toast.options.type
+        }"
+     (mouseenter)="onEnter($event)"
+     (mousemove)="onMouseMove($event)"
+     (mouseleave)="onLeave($event)">
+  <div class="perspective-wrapper">
+    <div class="toast-icon" *ngIf="icon"><i class="{{ icon }}"></i></div>
+    <div class="toast-title" *ngIf="title" [innerHTML]="title"></div>
+    <div class="toast-content" *ngIf="text" [innerHTML]="text"></div>
+    <div class="toast-progress-loader" *ngIf="toast.options.showProgressBar">
+      <span [ngStyle]="{'width': progressWidth + '%'}"><span></span></span>
+    </div>
+  </div>
+</div>

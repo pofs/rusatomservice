@@ -1,0 +1,73 @@
+<div class="title-banner" style="background-image: url(/assets/img/header/pres_centr.jpg);">
+  <h1 class="h1">{{ 'PUBLIC.NEWS.TITLE' | translate }}</h1>
+</div>
+<div class="global-page_content container">
+  <div class="filter-content justify-content-start row">
+    <!--<form class="subscription-form" action="">-->
+      <!--<input type="text" class="subscription-input" name="subscription-input" value="" placeholder="Подписаться на новости: ">-->
+      <!--<button class="submit-btn"></button>-->
+    <!--</form>-->
+    <!--<span class="btn btn-subscription">Подписаться на новости</span>-->
+    <div class="select-items">
+      <div class="item" *appIfLocale="'ru'">
+        <app-dropdown-ui [form]="filter" controlName="location" label="Страна">
+          <app-dropdown-ui-option label="Все страны"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Армения" label="Армения"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Белоруссия" label="Белоруссия"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Болгария" label="Болгария"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Венгрия" label="Венгрия"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Египет" label="Египет"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Индия" label="Индия"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Иран" label="Иран"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Китай" label="Китай"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Словакия" label="Словакия"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Украина" label="Украина"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Турция" label="Турция"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Финляндия" label="Финляндия"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Чехия" label="Чехия"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Россия" label="Россия"></app-dropdown-ui-option>
+        </app-dropdown-ui>
+      </div>
+      <div class="item" *appIfLocale="'en'">
+        <app-dropdown-ui [form]="filter" controlName="location" label="Country">
+          <app-dropdown-ui-option label="All country"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Armenia" label="Armenia"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Bulgaria" label="Bulgaria"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Egypt" label="Egypt"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Hungary" label="Hungary"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Slovakia" label="Slovakia"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Turkey" label="Turkey"></app-dropdown-ui-option>
+          <app-dropdown-ui-option value="Ukraine" label="Ukraine"></app-dropdown-ui-option>
+        </app-dropdown-ui>
+      </div>
+      <div class="item" *ngIf="aes$ | async as aes">
+        <app-dropdown-ui [form]="filter" controlName="aes" [label]="'PUBLIC.PROJECTS.AES' | translate">
+          <app-dropdown-ui-option [label]="'PUBLIC.PROJECTS.ALL' | translate"></app-dropdown-ui-option>
+          <app-dropdown-ui-option *ngFor="let a of aes" [value]="a.id" [label]="a.name"></app-dropdown-ui-option>
+        </app-dropdown-ui>
+      </div>
+      <div class="item" *ngIf="workDirections$ | async as workDirections">
+        <app-dropdown-ui [form]="filter" controlName="workDirection" [label]="'PUBLIC.PROJECTS.WORKDIRECTIONS' | translate">
+          <app-dropdown-ui-option  [label]="'PUBLIC.PROJECTS.ALL' | translate"></app-dropdown-ui-option>
+          <app-dropdown-ui-option *ngFor="let w of workDirections" [value]="w.id" [label]="w.name"></app-dropdown-ui-option>
+        </app-dropdown-ui>
+      </div>
+    </div>
+  </div>
+  <div class="news-list row">
+    <ng-container *ngIf="news$ | async as news">
+      <div *ngFor="let n of news"
+           class="{{ n.props.inSlider ? 'col-12 col-sm-6 col-md-4 col-xl-6 item big-item' : 'col-12 col-sm-6 col-md-4 col-xl-3 item' }}">
+        <a routerLink="{{ 'URIPREFIX' | translate }}/press-center/news/{{ n.id }}">
+          <img [src]="n.previewPicture | addDefaultHost" [alt]="n.name">
+          <div class="text-info">
+            <time class="time">{{ n.createdDate }}</time>
+            <strong class="title">{{ n.name }}</strong>
+          </div>
+        </a>
+      </div>
+      <app-pagination-ui *ngIf="news.pageCount > 1" [total]="news.pageCount"
+                         [current]="news.currentPage" (paginate)="paginate($event)"></app-pagination-ui>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="title-banner" style="background-image: url(/assets/img/header/vakansii.jpg);">
+  <h1 class="h1">{{ 'PUBLIC.ABOUT.VACANCIESALL.TITLE' | translate }}</h1>
+</div>
+<div class="global-page_content container">
+  <div class="row">
+    <div class="col-12 col-md-9 col-lg-6">
+      <h2 class="h2">Мы верим, что в мире есть масса возможностей заниматься тем, что по-настоящему нравится.
+        И точно знаем, что это можно делать у нас, в хорошей компании.</h2>
+    </div>
+  </div>
+  <div class="work-foto row">
+    <div class="item">
+      <img src="/assets/img/foto2.jpg" alt="foto">
+    </div>
+    <div class="item">
+      <img src="/assets/img/foto1.jpg" alt="foto">
+    </div>
+    <div class="text col-12 col-md-5 col-xl-8 ">
+      Работа в Русатом Сервис — это возможность реализовать себя в большой группе компаний
+      и быть напрямую причастным к созданию уникальных продуктов на российском медиарынке.
+    </div>
+  </div>
+  <ng-container *ngIf="vacancies$ | async as vacancies">
+    <div class="vacancies-accordion">
+      <div class="item" *ngFor="let vac of vacancies">
+        <div class="accordion-title" (click)="open(vac.id)" [class.active]="openedVacancy === vac.id">{{ vac.name }}<span class="toggle-circle"></span></div>
+        <div class="vacancies-info">
+          <div class="text" [innerHtml]="vac.detailText | addDefaultHost | sanitizeHtml"></div>
+          <strong class="title">Контакты</strong>
+          <div class="callback-vacancies">
+            <div class="img-box">
+              <img src="/assets/img/persone-callback2.jpg" alt="persone">
+            </div>
+            <div class="box">
+              <strong class="title">Салапина Мария</strong>
+              <span>Специалист по подбору персонала АО «Русатом сервис»</span>
+              <a href="mailto:MMSalapina@rusatomservice.ru">MMSalapina@rusatomservice.ru</a>
+            </div>
+          </div>
+          <div class="btn btn-vacancies" (click)="openVacanciesForm()">Откликнуться на вакансию</div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

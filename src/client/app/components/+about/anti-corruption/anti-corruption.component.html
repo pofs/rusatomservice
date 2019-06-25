@@ -1,0 +1,225 @@
+<div class="title-banner" style="background-image: url(/assets/img/header/korupciya.jpg);">
+  <h1 class="h1">{{ 'PUBLIC.ABOUT.ANTICORRUPTION.TITLE' | translate }}</h1>
+  <div class="text" *appIfLocale="'ru'">
+    <p>В целях минимизации рисков коррупционных проявлений, хищений и мошенничества на предприятиях атомной отрасли генеральным директором
+      госкорпорации «Росатом» С.В. Кириенко утверждена Комплексная программа противодействия коррупции и хищениям в атомной отрасли.</p>
+  </div>
+</div>
+<div class="global-page_content container" *appIfLocale="'en'">
+  <div class="program-corruption">
+    <p>
+      In our effort to prevent illegal behaviour within ROSATOM, we have adopted an anti-corruption and anti-embezzlement programme that provides for an integrated set of industry-specific administrative, economic, legal and human resource measures to minimise the risk of corruption, embezzlement and fraud.
+    </p>
+    <p>
+      The Programme is based on the best national and international practices, ensuring compliance with the law, intolerance to corruption and prevention of crime.
+    </p>
+    <p>
+      The Programme introduces efficient controls and feedback channels – instances of corruption can be reported by phone, email or post. Any employee who has come to know any facts of corruption or fraud can report them directly to the Asset Protection Department which is responsible for anti-corruption efforts and which guarantees the confidentiality and an independent review of information that is reported.
+    </p>
+    <p>
+      The Anti-Corruption Programme has already contributed to building a corruption-free environment within ROSATOM.
+    </p>
+    <p>
+      <a href="mailto:0707@rosatom.ru">Report corruption</a>
+    </p>
+  </div>
+</div>
+<div class="global-page_content container" *appIfLocale="'ru'">
+  <div class="program-corruption">
+    <h2 class="h2">Целью программы является предотвращение и снижение ущерба от рисков хищений активов Росатома и как следствие – повышение конкурентоспособности госкорпорации.</h2>
+    <ul class="program-corruption_list row">
+      <li class="col-12 col-md-4 item">
+        <a class="cursor-pointer" (click)="showFiles()">
+          <img src="/assets/img/file.png" alt="file">
+          <div class="box">
+            <span class="title">Нормативные правовые и иные акты в сфере противодействия коррупции</span>
+            <span class="size">26 документов</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="text-wrap row">
+    <div class="col-12 col-md-8">
+      <h2 class="h2">Обратная связь</h2>
+      <p>Если Вам стало известно о совершении (приготовлении) работниками Госкорпорации «Росатом» или организаций атомной отрасли коррупционных правонарушений или каких-либо действий, нарушающих имущественные и иные права и законные интересы Госкорпорации «Росатом», Вы может сообщить об этом, воспользовавшись специализированными каналами связи горячей линии, включающими:</p>
+    </div>
+  </div>
+  <div class="callback-corruption_list">
+    <div class="item">
+      <span class="title"><img src="/assets/img/svg/sms_red.svg" alt="sms">E-mail</span>
+      <a class="mail" href="mailto:0707@rosatom.ru">0707@rosatom.ru</a>
+    </div>
+    <div class="item">
+      <span class="title"><img src="/assets/img/svg/tel_red.svg" alt="sms">Телефон</span>
+      <a href="tel:0707@rosatom.ru">8 (800) 100 0707</a>
+      <span class="text">
+				(многоканальный, круглосуточно, бесплатно из любой точки страны).
+			</span>
+    </div>
+    <div class="item">
+      <span class="title"><img src="/assets/img/svg/mark-symbol_red.svg" alt="sms">Для почтовых отправлений</span>
+      <address>
+        119017, Москва, а/я 226,
+      </address>
+      <p>Департамент защиты активов Госкорпорации «Росатом».</p>
+    </div>
+  </div>
+  <div class="text-wrap">
+    <h2 class="h2">Примечания</h2>
+    <ol>
+      <li>Указанные каналы связи замыкаются исключительно на Департамент защиты активов Госкорпорации «Росатом».</li>
+      <li>Заявителям гарантируется независимость рассмотрения любого сообщения, а также неразглашение источника сообщения.</li>
+      <li>Анонимные обращения рассматриваются.</li>
+      <li>К правонарушениям коррупционной и иной направленности относятся дача взятки, получение взятки, злоупотребление полномочиями, коммерческий подкуп, иное незаконное использование физическим лицом своего должностного положения вопреки законным интересам общества и государства в целях получения выгоды в виде денег, ценностей, иного имущества или услуг имущественного характера, иных имущественных прав для себя или для третьих лиц либо незаконное предоставление такой выгоды указанному лицу другими физическими лицами, а также совершение указанных выше деяний от имени или в интересах юридического лица и иные действия (бездействие) и/или решения должностных лиц, затрагивающие права и законные интересы Госкорпорации «Росатом» и/ или ее организаций.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="model-window model-window-file" *ngIf="popupVisible">
+  <div class="overlay" (click)="hideFiles()"></div>
+  <div class="popup popup-file">
+		<span class="close" (click)="hideFiles()">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+			  viewBox="0 0 491.9 491.9" xml:space="preserve">
+				<path class="st0" d="M465.2,211.6H280.2V26.7c0-8.4-11.4-26.7-34.3-26.7s-34.3,18.3-34.3,26.7v184.9H26.7
+					c-8.4,0-26.7,11.4-26.7,34.3c0,22.9,18.3,34.3,26.7,34.3h184.9v184.9c0,8.4,11.4,26.7,34.3,26.7s34.3-18.3,34.3-26.7V280.2h184.9
+					c8.4,0,26.7-11.4,26.7-34.3S473.6,211.6,465.2,211.6z"></path>
+			</svg>
+		</span>
+    <strong class="title">НОРМАТИВНЫЕ ПРАВОВЫЕ И ИНЫЕ АКТЫ В СФЕРЕ ПРОТИВОДЕЙСТВИЯ КОРРУПЦИИ</strong>
+    <div class="popup-content" [perfectScrollbar]>
+      <ul class="files-download row">
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/07.08.2001_№_115-ФЗ.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" />
+            <span class="name-file">Федеральный закон от 07.08.2001 № 115-ФЗ &laquo;О противодействии легализации
+              (отмыванию) доходов, полученных преступным путем, и финансированию терроризма&raquo;</span>
+          </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/25.12.2008_№_273-ФЗ.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" />
+            <span class="name-file">Федеральный закон от 25.12.2008 № 273-ФЗ
+              &laquo;О противодействии коррупции&raquo;</span>
+          </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/17.07.2009_№_172-ФЗ.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" />
+            <span class="name-file">Федеральный закон от 17.07.2009 № 172-ФЗ &laquo;Об антикоррупционной экспертизе нормативных
+              правовых актов и проектов нормативных правовых актов&raquo;</span>
+          </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/18.05.2009_№_557.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" />
+            <span class="name-file">Указ Президента Российской Федерации от 18.05.2009 № 557 &laquo;Об утверждении перечня
+              должностей федеральной государственной службы, при назначении на которые граждане и при замещении которых
+              федеральные государственные служащие обязаны представлять сведения о своих доходах, об имуществе и
+              обязательствах имущественного характера, а также сведения о доходах, об имуществе и обязательствах
+              имущественного характера своих супруги (супруга) и несовершеннолетних детей&raquo;</span>
+          </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/18.05.2009_№_559.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" /> <span class="name-file">Указ Президента Российской Федерации от 18.05.2009 № 559 &laquo;О представлении гражданами, претендующими на замещение должностей федеральной государственной службы, и федеральными государственными служащими сведений о доходах, об имуществе и обязательствах имущественного характера&raquo;</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/21.09.2009_№_1065.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" /> <span class="name-file">Указ Президента Российской Федерации от 21.09.2009 № 1065 &laquo;О проверке достоверности и полноты сведений, представляемых гражданами, претендующими на замещение должностей федеральной государственной службы, и федеральными государственными служащими, и соблюдения федеральными государственными служащими требований к служебному поведению&raquo;</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/01.07.2010_№_821.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" /> <span class="name-file">Указ Президента Российской Федерации от 01.07.2010 № 821 &laquo;О комиссиях по соблюдению требований к служебному поведению федеральных государственных служащих и урегулированию конфликта интересов&raquo;</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/11.04.2014_№_226.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" /> <span class="name-file">Указ Президента Российской Федерации от 11.04.2014 № 226 &laquo;О Национальном плане противодействия коррупции на 2014 - 2015 годы&raquo;</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/26.02.2010_№_96.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" /> <span class="name-file">Постановление Правительства Российской Федерации от 26.02.2010 № 96 &laquo;Об антикоррупционной экспертизе нормативных правовых актов и проектов нормативных правовых актов&raquo; (вместе с &laquo;Правилами проведения антикоррупционной экспертизы нормативных правовых актов и проектов нормативных правовых актов&raquo;, &laquo;Методикой проведения антикоррупционной экспертизы нормативных правовых актов и проектов нормативных правовых актов&raquo;)</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/postanovlenie_613_22_07_2013.pdf">
+            <img src="/assets/img/icons/pdf.svg" alt="pdf" /> <span class="name-file">Постановление Правительства Российской Федерации от 22.07.2013 № 613 &laquo;О представлении гражданами, претендующими на замещение должностей в организациях, созданных для выполнения задач, поставленных перед Правительством Российской Федерации, и работниками, замещающими должности в этих организациях, сведений о доходах, расходах, об имуществе и обязательствах имущественного характера, проверке достоверности и полноты представляемых сведений и соблюдения работниками требований к служебному поведению&raquo;</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/07.10.2013_№_530н.txt">
+            <img src="/assets/img/icons/txt.svg" alt="txt" /> <span class="name-file">Приказ Министерства труда и социальной защиты Российской Федерации от 07.10.2013 № 530н &laquo;О требованиях к размещению и наполнению подразделов, посвященных вопросам противодействия коррупции, официальных сайтов федеральных государственных органов, Центрального Банка Российской Федерации, Пенсионного фонда Российской Федерации, Фонда социального страхования Российской Федерации, Федерального фонда обязательного медицинского страхования, государственных корпораций (компаний), иных организаций, созданных на основании федеральных законов, и требованиях к должностям, замещение которых влечет за собой размещение сведений о доходах, расходах и обязательствах имущественного характера&raquo; (зарегистрировано в Минюсте России 25 декабря 2013 г. N 30803)</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/archive_26.zip">
+            <img src="/assets/img/icons/zip.svg" alt="zip" /> <span class="name-file">&laquo;Методические рекомендации по разработке и принятию организациями мер по предупреждению и противодействию коррупции&raquo; (изданы Министерством труда и социальной защиты Российской Федерации 08.11.2013 во исполнение Указа Президента Российской Федерации от 02.04.2013 № 309 &laquo;О мерах по реализации отдельных положений Федерального закона &laquo;О противодействии коррупции&raquo; и в соответствии со статьей 13.3 Федерального закона от 25.12.2008 № 273-ФЗ &laquo;О противодействии коррупции&raquo; и опубликованы на сайте http://www.rosmintrud.ru)</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/2014-2015(1-655-P).docx">
+            <img src="/assets/img/icons/doc.svg" alt="docx" /> <span class="name-file">План противодействия коррупции на 2014-2015 гг.(приказ 1-655-П)</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/prikaz_1_6761.doc">
+            <img src="/assets/img/icons/doc.svg" alt="doc" /> <span class="name-file">Приказ Госкорпорации &laquo;Росатом&raquo; от 25.06.2013 № 1/676-П &laquo;О мерах по реализации отдельных положений Указов Президента Российской Федерации от 02.04.2013 № 309 и № 310&raquo;(в редакции приказов Госкорпорации &laquo;Росатом&raquo; от 16.10.2013 № 1/1098-П, от 23.01.2014 № 1/55-П, от 09.10.2014 № 1/969-П, от 22.01.2015 № 1/29-П, от 30.01.2015 № 1/60-П и от 23.03.2015 № 1/232-П)</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/prikaz_677_v_red_1_47.doc">
+            <img src="/assets/img/icons/doc.svg" alt="doc" /> <span class="name-file">Приказ Госкорпорации &laquo;Росатом&raquo; от 25.06.2013 № 1/677-П &laquo;Об определении в Госкорпорации &laquo;Росатом&raquo; подразделения по профилактике коррупционных и иных правонарушений&raquo; (в редакции приказа Госкорпорации &laquo;Росатом&raquo; от 27.01.2015 № 1/47-П)</span> <span class="doclink__size">80.5 Кб</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/prikaz_1_666.doc">
+            <img src="/assets/img/icons/doc.svg" alt="doc" /> <span class="name-file">Приказ Госкорпорации &laquo;Росатом&raquo; от 25.06.2013 № 1/666-П &laquo;Об утверждении перечня должностей Госкорпорации &laquo;Росатом&raquo;, при назначении на которые граждане и при замещении которых работники Госкорпорации &laquo;Росатом&raquo; обязаны представлять сведения о своих доходах, об имуществе и обязательствах имущественного характера, а также сведения о доходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей&raquo; (в редакции приказа от 27.03.2015 № 1/273-П)</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/order_1-762-P_1-1105_1-359-P.docx">
+            <img src="/assets/img/icons/doc.svg" alt="docx" /> <span class="name-file">Приказ Госкорпорации &laquo;Росатом&raquo; от 14.08.2014 № 1/762-П &laquo;Об утверждении перечня должностей Госкорпорации &laquo;Росатом&raquo;, на которые распространяются запреты, предусмотренные пунктами 1 &ndash; 4 и 7 -11 части четвертой статьи 349.1 Трудового кодекса Российской Федерации&raquo; (в редакции приказов Госкорпорации &laquo;Росатом&raquo; от 17.11.2014 № 1/1105-П и от 13.04.2015 № 1/359-П)</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/1_8_npa.doc">
+            <img src="/assets/img/icons/doc.svg" alt="doc" /> <span class="name-file">Приказ Госкорпорации &laquo;Росатом&raquo; от 18.10.2013 №1/8-НПА &laquo;Об утверждении Порядка уведомления работниками Госкорпорации &laquo;Росатом&raquo; работодателя о фактах обращения каких-либо лиц в целях склонения к совершению коррупционных правонарушений, организации проверки этих сведений и регистрации уведомлений&raquo;</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/antikorrupcciya_1_23.doc">
+            <img src="/assets/img/icons/doc.svg" alt="doc" /> <span class="name-file">Приказ от 04.07.2014 № 1/23-НПА "Об утверждении перечня должностей Госкорпорации «Росатом», замещение которых влечет за собой размещение сведений о доходах, расходах, имуществе и обязательствах имущественного характера работников Госкорпорации «Росатом», а также сведений о доходах, расходах, имуществе и обязательствах имущественного характера их супруг (супругов) и несовершеннолетних детей на официальном сайте Госкорпорации «Росатом» в информационно-телекоммуникационной сети Интернет"</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/1_476_red_1_790.doc">
+            <img src="/assets/img/icons/doc.svg" alt="doc" /> <span class="name-file">Приказ Госкорпорации «Росатом» от 22.05.2014 № 1/476-П «Об утверждении Положения о сообщении работниками Госкорпорации «Росатом» о получении подарка в связи с их должностным положением или исполнением ими должностных обязанностей, сдаче и оценке подарка, реализации (выкупе) и зачислении средств, вырученных от его реализации» (в редакции приказа от 22.08.2014 № 1-790-П)</span> </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/prikaz_1_378_P.docx">
+            <img src="/assets/img/icons/doc.svg" alt="docx" /> <span class="name-file">Приказ Госкорпорации «Росатом» от 18.04.2014 №1/378-П «О мерах по реализации Указа Президента Российской Федерации от 08.07.2013 № 613 «Вопросы противодействия коррупции»</span></a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/prikaz_1_16_NPA.docx">
+            <img src="/assets/img/icons/doc.svg" alt="docx">
+            <span class="name-file">Приказ Госкорпорации «Росатом» от 22.04.2014 №1/16-НПА «Об утверждении Порядка принятия работниками Госкорпорации «Росатом» мер по недопущению любой возможности возникновения конфликта интересов»</span>
+          </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/prikaz_1_2_NPA.docx">
+            <img src="/assets/img/icons/doc.svg" alt="docx">
+            <span class="name-file">Приказ Госкорпорации «Росатом» от 20.09.2013 №1/2-НПА «Об утверждении Положения о порядке проведения антикоррупционной экспертизы нормативных правовых актов и проектов нормативных правовых актов Госкорпорации «Росатом»</span>
+          </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/prikaz_05_06_2015_1_8_npa.docx">
+            <img src="/assets/img/icons/doc.svg" alt="docx">
+            <span class="name-file">Приказ Госкорпорации «Росатом» от 05.06.2015 №1/8-НПА «Об утверждении перечня должностей Госкорпорации «Росатом», при замещении которых работникам Госкорпорации «Росатом» запрещается открывать и иметь счета (вклады), хранить наличные денежные средства и ценности в иностранных банках, расположенных за пределами территории Российской Федерации, владеть и (или) пользоваться иностранными финансовыми инструментами»</span>
+          </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/sved_dohody_rashody.doc">
+            <img src="/assets/img/icons/doc.svg" alt="doc">
+            <span class="name-file">Порядок предоставления сведений о доходах, расходах</span>
+          </a>
+        </li>
+        <li class="col-12 col-md-4">
+          <a target="_blank" href="{{ backendHost }}/ru/about/korupcia/polozhenie_o_proverke.docx">
+            <img src="/assets/img/icons/doc.svg" alt="docx">
+            <span class="name-file">Положение об осуществлении проверки достоверности и полноты сведений</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

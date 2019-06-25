@@ -1,0 +1,50 @@
+<div class="global-page_content container" *ngIf="newsElement$ | async as element">
+  <time class="time">{{ element.createdDate }}</time>
+  <h1 class="h1">{{ element.name }}</h1>
+  <div class="single-img_news" *ngIf="element.detailPicture">
+    <img [src]="element.detailPicture | addDefaultHost" [alt]="element.name">
+  </div>
+  <div class="text-wrap" [innerHtml]="element.detailText | addDefaultHost | sanitizeHtml"></div>
+
+  <div class="project-slider">
+    <div class="slider" *ngIf="element.props.additionalPhotos && element.props.additionalPhotos.length > 0">
+      <div class="slider-items">
+        <ngu-carousel [inputs]="carousel">
+          <div class="item" ngu-item NguCarouselItem
+               *ngFor="let photo of element.props.additionalPhotos">
+            <a (click)="box(photo)">
+              <img [src]="photo.src | addDefaultHost" [alt]="element.name">
+            </a>
+          </div>
+          <button NguCarouselPrev class="arrow-slider arrow-prev leftRs">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 188.7 306" xml:space="preserve">
+                    <polygon class="st0" points="153,306 188.7,270.3 71.4,153 188.7,35.7 153,0 0,153"></polygon>
+                  </svg>
+          </button>
+          <button NguCarouselNext class="arrow-slider arrow-next rightRs">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 188.7 306" xml:space="preserve">
+                    <polygon class="st0" points="35.7,0 0,35.7 117.3,153 0,270.3 35.7,306 188.7,153"></polygon>
+                  </svg>
+          </button>
+        </ngu-carousel>
+      </div>
+   </div>
+  </div>
+
+  <ng-container *ngIf="recentNews$ | async as recentNews">
+    <h2 class="h2">Последние новости</h2>
+    <div class="news-list row">
+      <div class="col-12 col-sm-6 col-md-4 col-xl-3 item" *ngFor="let n of recentNews">
+        <a routerLink="{{ 'URIPREFIX' | translate }}/press-center/news/{{ n.id }}">
+          <img [src]="n.previewPicture | addDefaultHost" [alt]="n.name">
+          <div class="text-info">
+            <time class="time">{{ n.createdDate }}</time>
+            <strong class="title">{{ n.name }}</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,88 @@
+﻿<div class="main">
+  <app-recent-news></app-recent-news>
+  <app-services-tree></app-services-tree>
+  <app-recent-projects></app-recent-projects>
+
+  <section class="trigger-trust" *appIfLocale="'ru'">
+    <div class="row">
+      <h2 class="h2">
+        ГК «Росатом» является глобальной компанией,
+        которая оперирует на международном рынке,
+        и развитие сервисного бизнеса за рубежом
+        приобретает все большую важность.
+      </h2>
+      <ul class="trigger-trust_list">
+        <li>
+          <img src="/assets/img/figure/fig1.png" alt="figure">
+          <strong class="h3">Цель компании</strong>
+          <div class="text">
+            <p>Становление АО «Русатом Сервис» как
+              универсальной компании предоставляющей
+              сервисные услуги на всех стадиях жизненного
+              цикла АЭС.</p>
+          </div>
+        </li>
+        <li>
+          <img src="/assets/img/figure/fig2.png" alt="figure">
+          <strong class="h3">Миссия компании</strong>
+          <div class="text">
+            <p>Надежное, качественное и эффективное
+              предоставление сервисного предложения
+              в атомной отрасли.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="trigger-trust" *appIfLocale="'en'">
+    <div class="row">
+      <h2 class="h2">
+        The Rusatom Service Joint Stock Company plays a role of
+        service offer integrator of the Rosatom State Corporation
+        for nuclear power plants abroad.
+      </h2>
+      <ul class="trigger-trust_list">
+        <li>
+          <img src="/assets/img/figure/fig1.png" alt="figure">
+          <strong class="h3">Purpose</strong>
+          <div class="text">
+            <p>Sustainable development of the Rusatom Service as a universal company that provide services at all stages of NPP lifetime cycle.</p>
+          </div>
+        </li>
+        <li>
+          <img src="/assets/img/figure/fig2.png" alt="figure">
+          <strong class="h3">Mission</strong>
+          <div class="text">
+            <p>Reliable, high-quality and efficient service offers in nuclear power engineering industry.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="shareholders-content">
+    <div class="row">
+      <h2 class="h2">
+        {{ 'PUBLIC.HOMEPAGE.SHAREHOLDERS' | translate }}
+      </h2>
+      <ul class="shareholders-list">
+        <li><img src="/assets/img/shareholders/img1.png" alt="img"></li>
+        <li><img src="/assets/img/shareholders/img2.png" alt="img"></li>
+        <li><img src="/assets/img/shareholders/img3.png" alt="img"></li>
+        <li><img src="/assets/img/shareholders/img4.png" alt="img"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="map-content" *appIfLocale="'ru'">
+    <div id="map" class="map-box">
+      <div id="root-IMah9Che"></div>
+      <!--<iframe [width]="interactiveWidth"-->
+              <!--(scroll)="scrollIframe($ev)"-->
+              <!--[height]="interactiveHeight"-->
+              <!--scrolling="no"-->
+              <!--[src]="script" frameborder="0"></iframe>      -->
+    </div>
+  </section>
+</div>

@@ -1,0 +1,168 @@
+@import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/mixins';
+
+:host {
+  display: block;
+  position: relative;
+
+  &:first-child {
+    .accordeon-element {
+      &:after {
+        content: initial;
+      }
+    }
+  }
+}
+
+.accordeon-element {
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: #efefef;
+  }
+
+  .accordeon-element-head {
+    padding: rem-calc(10 10);
+    font-size: rem-calc(15);
+    line-height: rem-calc(20);
+    background-color: transparent;
+    color: $black;
+    transition: all 0.4s ease;
+    position: relative;
+    user-select: none;
+    margin: -1px -1px 0 -1px;
+
+    .control {
+      position: absolute;
+      top: rem-calc(10);
+      right: rem-calc(12);
+      width: rem-calc(12);
+      height: rem-calc(12);
+      color: $dark-gray;
+
+      .switch {
+        display: none;
+      }
+
+      .up-down {
+        .up {
+          display: none;
+        }
+
+        .down {
+          display: inherit;
+        }
+      }
+    }
+  }
+
+  .accordeon-element-body {
+    .padding-wrapper {
+      padding: rem-calc(9);
+      font-size: rem-calc(14);
+    }
+  }
+
+  &.opened {
+    &:after {
+      content: initial;
+    }
+
+    & > .accordeon-element-head {
+      background-color: #00af5c;
+      border-top-left-radius: rem-calc(4);
+      border-top-right-radius: rem-calc(4);
+      color: white;
+
+      .control {
+        color: white;
+
+        .up-down {
+          .up {
+            display: inherit;
+          }
+
+          .down {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.accordeon-element-body {
+  :host {
+    .accordeon-element {
+      transition: all 0.35s ease;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background: #efefef;
+      }
+
+      .accordeon-element-head {
+        color: $dark-gray;
+
+        .control {
+          top: rem-calc(14);
+          right: rem-calc(10);
+          width: rem-calc(14);
+          height: rem-calc(14);
+          color: $dark-gray;
+          transition: color 0.4s ease;
+
+          .switch {
+            display: inherit;
+
+            circle {
+              transition: transform 0.3s ease;
+              transform: translate3d(-24px, 0, 0);
+            }
+          }
+
+          .up-down {
+            display: none;
+          }
+        }
+      }
+
+      .accordeon-element-body {
+        transition: background 0.4s ease 0.2s;
+      }
+
+      &.opened {
+        background-color: #f5f5f5;
+
+        .accordeon-element-head {
+          border-radius: 0;
+          background-color: transparent;
+          color: $black;
+
+          .control {
+            color: $green;
+
+            .switch {
+              circle {
+                transform: translate3d(0, 0, 0);
+              }
+            }
+          }
+        }
+
+        .accordeon-element-body {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.company-history{
+	background-repeat:no-repeat;
+	background-size:cover;
+	color:#fff;
+	font-size:22px;
+	padding:140px 50px 100px;
+	margin:0 -2.28em 60px;
+	background-position: center;
+	.text-wrap{
+		max-width:600px;
+		margin:0;
+		h2, .h2{
+			font-size:30px;
+		}
+	}
+}
+@media(max-width:1279px){
+	.company-history{
+		font-size:18px;
+	}
+}
+
+@media(max-width:1023px){
+	.company-history{
+		font-size:16px;
+		margin:0 0 50px;
+		padding:60px 30px;
+	}
+}
+
+@media(max-width:767px){
+	.company-history{
+		padding:30px 20px;
+		.text-wrap .h2{
+			font-size:22px;
+		}
+	}
+}

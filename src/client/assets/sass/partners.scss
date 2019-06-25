@@ -1,0 +1,14 @@
+.partners-list{
+	.item{
+		margin-bottom:em(60px);
+	}
+}
+
+
+@media(max-width:575px){
+	.partners-list{
+		.item img{
+			width:100%;
+		}
+	}
+}

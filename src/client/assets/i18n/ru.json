@@ -1,0 +1,196 @@
+{
+  "APP_NAME": "RusAtomService",
+  "DEFAULT_TITLE": "Русатом Сервис",
+  "DEFAULT_META_DESCRIPTION": "Русатом Сервис",
+  "URIPREFIX": "",
+  "LOGO": "/assets/img/logo.svg",
+  "PUBLIC": {
+    "HOMEPAGE": {
+      "SHAREHOLDERS": "Наши акционеры"
+    },
+    "MENU": {
+      "ACTIVITIES": "Направления деятельности",
+      "ABOUT": {
+        "ABOUT": "О компании",
+        "ATOMTEHEXPORT": "Атомтехэкспорт",
+        "ADVANTAGES": "Наши преимущества",
+        "PARTNERS": "Партнеры",
+        "CERTIFICATES": "Сертификаты",
+        "TEAM": "Команда",
+        "ATEX_TEAM": "Команда",
+        "REVIEWS": "Отзывы и референции",
+        "SUPPLIERS": "Поставщикам",
+        "ANTICORRUPTION": "Противодействие коррупции",
+        "VACANCIES": "Соискателям",
+        "VACANCIESALL": "Текущие вакансии",
+        "CANDIDATES": "Кадровый резерв"
+      },
+      "ATOMTECHEXPORT": "Атомтехэкспорт",
+      "PROJECTS": "Проекты",
+      "PRESSCENTER": {
+        "PRESSCENTER": "Пресс-центр",
+        "NEWS": "Новости",
+        "COMP_NEWS": "Новости компании",
+        "OTR_NEWS": "Новости отрасли",
+        "SMI": "Сми о нас",
+        "GALLERY": "Фотогаллерея",
+        "IDENTITY": "Фирменный стиль"
+      },
+      "CONTACTS": "Контакты"
+    },
+    "HOME": {
+      "PAGE_TITLE": "Русатом Сервис",
+      "META_DESCRIPTION": "Русатом Сервис"
+    },
+    "ABOUT": {
+      "PAGE_TITLE": "Русатом Сервис - О компании",
+      "META_DESCRIPTION": "О компании",
+      "RUSATOMSERVICE": {
+        "PAGE_TITLE": "Русатом Сервис",
+        "META_DESCRIPTION": "",
+        "TITLE": "Русатом Сервис"
+      },
+      "ATEX": {
+        "PAGE_TITLE": "Атомтехэкспорт",
+        "META_DESCRIPTION": "",
+        "TITLE": "Атомтехэкспорт",
+        "HISTORY_TITLE": "История",
+        "COMPETENCIES_TITLE": "Компетенции",
+        "CERTIFICATES_TITLE": "СЕРТИФИКАТЫ И ЛИЦЕНЗИИ",
+        "SUPPLIERS_TITLE": "ИНФОРМАЦИЯ ДЛЯ ПОСТАВЩИКОВ"
+      },
+      "ADVANTAGES": {
+        "PAGE_TITLE": "Наши преимущества",
+        "META_DESCRIPTION": "Наши преимущества",
+        "TITLE": "Наши преимущества",
+        "FOR_CLIENTS": "Для клиентов",
+        "FOR_SUPPLIERS": "Для поставщиков"
+      },
+      "PARTNERS": {
+        "PAGE_TITLE": "Наши партнеры",
+        "TITLE": "Наши партнеры",
+        "META_DESCRIPTION": "Наши партнеры"
+      },
+      "CERTIFICATES": {
+        "PAGE_TITLE": "Наши сертификаты",
+        "TITLE": "Наши сертификаты",
+        "META_DESCRIPTION": "Наши сертификаты"
+      },
+      "REVIEWS": {
+        "PAGE_TITLE": "Отзывы и референции",
+        "TITLE": "Отзывы и референции",
+        "META_DESCRIPTION": "Отзывы и референции"
+      },
+      "TEAM": {
+        "PAGE_TITLE": "Команда Русатом сервис",
+        "TITLE": "Команда Русатом сервис",
+        "META_DESCRIPTION": "Команда Русатом сервис"
+      },
+      "ATEX_TEAM": {
+        "PAGE_TITLE": "Команда Атомтехэкспорт",
+        "TITLE": "Команда Атомтехэкспорт",
+        "META_DESCRIPTION": "Команда Атомтехэкспорт"
+      },
+      "SUPPLIERS": {
+        "PAGE_TITLE": "ИНФОРМАЦИЯ ДЛЯ ПОСТАВЩИКОВ",
+        "TITLE": "ИНФОРМАЦИЯ ДЛЯ ПОСТАВЩИКОВ",
+        "META_DESCRIPTION": "ИНФОРМАЦИЯ ДЛЯ ПОСТАВЩИКОВ"
+      },
+      "ANTICORRUPTION": {
+        "TITLE": "Противодействие коррупции",
+        "PAGE_TITLE": "Противодействие коррупции",
+        "META_DESCRIPTION": "Противодействие коррупции"
+      },
+      "VACANCIESALL": {
+        "TITLE": "Соискателям",
+        "PAGE_TITLE": "ТЕКУЩИЕ ВАКАНСИИ",
+        "META_DESCRIPTION": "ТЕКУЩИЕ ВАКАНСИИ"
+      },
+      "CANDIDATES": {
+        "TITLE": "КАДРОВЫЙ РЕЗЕРВ",
+        "PAGE_TITLE": "КАДРОВЫЙ РЕЗЕРВ",
+        "META_DESCRIPTION": "КАДРОВЫЙ РЕЗЕРВ"
+      }
+    },
+    "ACTIVITIES": {
+      "PAGE_TITLE": "Русатом Сервис - направления деятельности",
+      "META_DESCRIPTION": "направления деятельности"
+    },
+    "PROJECTS": {
+      "PAGE_TITLE": "Проекты",
+      "TITLE": "Проекты",
+      "META_DESCRIPTION": "Проекты",
+      "HOW_TO_JOIN": "как присоединиться к проектам",
+      "WORKDIRECTIONS": "Направление деятельности",
+      "AES": "АЭС",
+      "ALL": "Все"
+    },
+    "PROJECT": {
+      "GOAL": "Цель проекта",
+      "RESULT": "Результаты",
+      "SIMILAR": "Похожие проекты",
+      "TEAM": "Команда",
+      "STAGE": "Этап",
+      "REVIEW": "Отзыв о работе",
+      "KEY_PARTNERS": "Ключевые партнеры",
+      "VOLUME": "Объемы работ",
+      "NEXT": "СЛЕДУЮЩИЙ ПРОЕКТ",
+      "RESPONSIBLE": "Ответственные"
+    },
+    "NEWS": {
+      "PAGE_TITLE": "Пресс-центр",
+      "TITLE": "Пресс-центр",
+      "META_DESCRIPTION": "Пресс-центр"
+    },
+    "COMPANY_NEWS": {
+      "PAGE_TITLE": "Новости компании",
+      "TITLE": "Новости компании",
+      "META_DESCRIPTION": "Новости компании"
+    },
+    "OTRASLY_NEWS": {
+      "PAGE_TITLE": "Новости отрасли",
+      "TITLE": "Новости отрасли",
+      "META_DESCRIPTION": "Новости отрасли"
+    },
+    "GALLERY": {
+      "PAGE_TITLE": "Фотогаллерея",
+      "TITLE": "Фотогаллерея",
+      "META_DESCRIPTION": "Фотогаллерея"
+    },
+    "CORPORATE_IDENTITY": {
+      "PAGE_TITLE": "Фирменный стиль",
+      "TITLE": "Фирменный стиль",
+      "META_DESCRIPTION": "Фирменный стиль"
+    },
+    "CONTACTS": {
+      "PAGE_TITLE": "Контакты",
+      "TITLE": "Контакты",
+      "META_DESCRIPTION": "Контакты",
+      "ADDRESS_TITLE": "Адрес",
+      "ADDRESS": "119071, Москва, Ленинский проспект, 15А",
+      "PHONE_TITLE": "Телефон",
+      "FAX_TITLE": "Факс",
+      "Q_TITLE": "По любым вопросам",
+      "COMPLAINTS_TITLE": "Для отзывов и предложений",
+      "PRESS_TITLE": "Пресс-служба",
+      "FEEDBACK_TITLE": "Обратная связь",
+      "MAP_TITLE": "Русатом сервис",
+      "FEEDBACK_NAME": "Имя",
+      "FEEDBACK_PHONE": "Телефон",
+      "FEEDBACK_MESSAGE": "Сообщение",
+      "FEEDBACK_ACCEPT_TERMS": "Согласен с политикой конфиденциальности",
+      "FEEDBACK_SEND": "Отправить",
+      "FEEDBACK_SUCCESS_TEXT": "Ваша заявка отправлена, специалист свяжется с Вами в ближайшее время."
+    }
+  },
+  "COMPONENTS": {
+    "RECENT_NEWS": {
+      "MAIN_ELEMENT_LABEL": "Главная новость",
+      "OTHER_NEWS": "Другие новости",
+      "ALL_NEWS": "Все новости"
+    },
+    "RECENT_PROJECTS": {
+      "HEADING": "Наши проекты"
+    }
+  }
+}

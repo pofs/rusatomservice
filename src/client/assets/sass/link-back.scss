@@ -1,0 +1,46 @@
+.wrap-link_back{
+	height: 100%;
+	position: fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width: 75px;
+	background: rgba(#000,0.3);
+	.link-back{
+		display: block;
+		width:75px;
+		position: relative;
+		height:75px;
+		transition:all 0.45s cubic-bezier(.7,.01,.45,1); 
+		background: #0781cf;
+		&:hover{
+			background: #cacaca;
+		}
+		svg{
+			width:20px;
+			height:20px;
+			position: absolute;
+			left:0;
+			right:0;
+			top:0;
+			bottom:0;
+			margin:auto;
+			.close{
+				fill:#fff;
+			}
+		}
+	}
+}
+
+
+@media(max-width:1428px){
+	.wrap-link_back .link-back{
+		height: 71px;
+	}
+}
+
+@media(max-width: 1279px){
+	.wrap-link_back{
+		display: none;
+	}
+}

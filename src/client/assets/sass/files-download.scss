@@ -1,0 +1,45 @@
+.files-download{
+	li{
+		margin-bottom:40px;
+	}
+	a{
+		color:#202020;
+		-webkit-transition: all 0.35s cubic-bezier(0.7, 0.01, 0.45, 1);
+	    -o-transition: all 0.35s cubic-bezier(0.7, 0.01, 0.45, 1);
+	    transition: all 0.35s cubic-bezier(0.7, 0.01, 0.45, 1);
+		&:hover{
+			color:#0781cf;
+		}
+	}
+	img{
+		display:block;
+		margin-bottom: 8px;
+	}
+	.name-file{
+		line-height: 30px;
+		margin-bottom: 15px;
+		display: block;
+	}
+	.size-file{
+		font-size: 14px;
+		display: block;
+		color: #9a9a9a;
+	}
+}
+
+@media(max-width:1279px){
+	.files-download{
+		.name-file{
+			line-height:24px;
+		}
+	}
+}
+
+@media(max-width:575px){
+	.files-download{
+		.name-file{
+			font-size:15px;
+			max-width:70%;
+		}
+	}
+}

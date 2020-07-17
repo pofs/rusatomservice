@@ -168,7 +168,7 @@
     "webpack-dll-bundles-plugin": "~1.0.0-beta.5",
     "webpack-hot-middleware": "~2.21.1",
     "webpack-merge": "~4.1.2",
-    "lodash": "~4.17.4"
+    "lodash": "~4.17.19"
   },
   "jest": {
     "preset": "jest-preset-angular",

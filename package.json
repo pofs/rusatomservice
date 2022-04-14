@@ -107,7 +107,7 @@
     "angular2-template-loader": "0.6.0",
     "assets-webpack-plugin": "~3.5.1",
     "foundation-sites": "^6.4.4-rc1",
-    "async": "~2.6.0",
+    "async": "~3.2.2",
     "autoprefixer": "~8.1.0",
     "awesome-typescript-loader": "~3.5.0",
     "codelyzer": "~4.2.1",
